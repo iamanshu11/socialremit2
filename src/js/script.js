@@ -539,3 +539,15 @@ function showForm(formType) {
 }
 
 AOS.init();
+
+function showFormfile(formTypefile) {
+  var smsFormfile = document.getElementById('smsFormfile');
+  var emailFormfile = document.getElementById('emailFormfile');
+  if (formTypefile == 'smsfile') {
+      smsFormfile.style.display = 'block';
+      emailFormfile.style.display = 'none';
+  } else if (formTypefile == 'emailfile') {
+      emailFormfile.style.display = 'block';
+      smsFormfile.style.display = 'none';
+  }
+}
