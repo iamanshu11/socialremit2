@@ -524,3 +524,18 @@ cards.forEach(card => {
     mouseHover = true;
   };
 });
+
+
+function showForm(formType) {
+  var smsForm = document.getElementById('smsForm');
+  var emailForm = document.getElementById('emailForm');
+  if (formType == 'sms') {
+      smsForm.style.display = 'block';
+      emailForm.style.display = 'none';
+  } else if (formType == 'email') {
+      emailForm.style.display = 'block';
+      smsForm.style.display = 'none';
+  }
+}
+
+AOS.init();

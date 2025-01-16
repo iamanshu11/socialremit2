@@ -11,7 +11,7 @@ module.exports = {
       },
       colors: {
         'primary': '#00A1CC',
-        'secondary': '#0F8482',
+        'secondary': '#1F1645',
       },
       backgroundImage: {
         'custom-image': "url('/images/hero-bg.png')",
