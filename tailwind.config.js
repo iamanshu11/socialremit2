@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/index.html',
 
@@ -10,6 +11,7 @@ module.exports = {
         '120': '120px', // Add custom padding-top 120px
       },
       colors: {
+        'active-blue': '#00A1CC',
         'primary': '#00A1CC',
         'secondary': '#1F1645',
       },

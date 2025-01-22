@@ -24,3 +24,23 @@ body
     perspective: 1000px; /* Apply to the parent container if needed */
 }
 
+.transition-all {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.triangle {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #00A1CC; /* Match the detail box background color */
+    position: absolute;
+    bottom: 100%; /* Position the triangle above the detail box */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-black-custom {
+    background-color: #00A1CC !important; 
+}

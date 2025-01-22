@@ -551,3 +551,54 @@ function showFormfile(formTypefile) {
       smsFormfile.style.display = 'none';
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+});
+
+// Add event listener for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  if (event.matches) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+});
+
+
+
+function toggle(detailId) {
+  const allDetailBoxes = document.querySelectorAll('.group .detail-box');
+  const allButtons = document.querySelectorAll('.group > div:first-child');
+
+  // Hide all boxes and reset buttons
+  allDetailBoxes.forEach(box => {
+      box.classList.add('hidden');
+      box.previousElementSibling.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl'); // Remove active background and text size
+      box.previousElementSibling.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base'); // Add inactive background and default text size
+  });
+
+  // Handle the current box
+  const clickedElement = document.getElementById(detailId);
+  const buttonElement = clickedElement.previousElementSibling; // Button is just before the detail box
+
+  if (clickedElement.classList.contains('hidden')) {
+      clickedElement.classList.remove('hidden');
+      buttonElement.classList.add('bg-[#00A1CC]', 'text-white', 'text-xl'); // Apply active background and larger text size
+      buttonElement.classList.remove('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
+  } else {
+      clickedElement.classList.add('hidden');
+      buttonElement.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl');
+      buttonElement.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
+  }
+}
+
+// Activate the second box on page load
+document.addEventListener('DOMContentLoaded', function() {
+  toggle('detail-box1');
+});
+
+
