@@ -568,6 +568,27 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to toggle dark mode based on preference
+  function toggleDarkMode(shouldAdd) {
+    if (shouldAdd) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  // Check the current preference on load
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  toggleDarkMode(prefersDarkMode);
+});
+
+// Listen for changes in the system theme
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  toggleDarkMode(event.matches);
+});
+
+
 
 
 function toggle(detailId) {
