@@ -206,11 +206,18 @@
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
                     </div>
                 </div>
-                <a href="#" class="bg-secondary text-white px-4 py-2 rounded-[10px] flex gap-4"><span class="font-bold  ">Download App</span>
-                    <div class="flex items-center gap-2">
-                        <img src="../images/social-apple.png" alt="" class="">
-                        <img src="../images/social-playstore.png" alt="" class="">
-                    </div></a>
+                <div class="flex items-center justify-between bg-secondary cursor-pointer rounded-[15px]">
+                    <!-- Sun Icon (Light Mode Button) -->
+                    <button id="light-mode" class="flex items-center justify-center bg-active-blue rounded-l-[15px] text-white w-12 h-12 focus:outline-none ">
+                        <span role="img" aria-label="Light Mode">🌞</span>
+                    </button>
+                    <!-- Moon Icon (Dark Mode Button) -->
+                    <button id="dark-mode" class="flex items-center justify-center bg-transparent text-white rounded-r-[15px] w-12 h-12 focus:outline-none">
+                        <span role="img" aria-label="Dark Mode">🌜</span>
+                    </button>
+                </div>
+                <a href="#" class="bg-secondary dark:bg-primary text-white px-4 py-3 rounded-[15px] flex gap-4"><span class="font-bold  ">Sign up</span>
+                </a>
             </div>
         </div>
     </header>
@@ -219,8 +226,7 @@
 
     <main>
 
-        
-
+    
         <section  class="h-auto lg:min-h-screen bg-white dark:bg-[#010C23] text-white pt-120 py-16 pb-6 flex items-center justify-center bg-cover bg-no-repeat" style="background-image: url('../images/banner-bg.png')">
             <div  class="container px-6 lg:px-10 mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
                 <!-- Left Section -->
@@ -955,6 +961,32 @@
                 </div>
         </section>
 
+        <section>
+            <div id="lottie-animation" class="w-96 h-96 z-10"></div>
+            <div id="lottie-background" class="absolute inset-0 -z-10">
+                <div id="background-lottie" class="w-full h-full"></div>
+            </div>
+            <script>
+                // Foreground Lottie Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('lottie-animation'), // The container for the foreground animation
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: '../images/social-remit.json' // Path to the Lottie JSON file
+                });
+            
+                // Background Lottie Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('background-lottie'), // The container for the background animation
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: '../images/social-remit.json' // Path to the Lottie JSON file
+                });
+            </script>
+        </section>
+
         <!-- <section class="py-16 bg-[#EBEBEB]">
             <div class="container mx-auto px-6 lg:px-10">
                 <div class="container mx-auto px-4">
@@ -1269,7 +1301,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillatilt@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js" integrity="sha384-DkJbDTY+uSHYNceDbBKr8o1DUWy8eLSoB3d9oz3x40m5VNS8U9WyT5NBO2UftcGz" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="../src/js/script.js"></script>
 
     <script>
