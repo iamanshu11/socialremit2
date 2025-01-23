@@ -636,3 +636,8 @@ function toggle(detailId) {
 document.addEventListener('DOMContentLoaded', function() {
   toggle('detail-box1');
 });
+
+
+
+
+
