@@ -1329,31 +1329,6 @@
         });
     </script>
 
-<script>
-    const lightModeButtonMobile = document.getElementById('light-mode-mobile');
-    const darkModeButtonMobile = document.getElementById('dark-mode-mobile');
-    const htmlDocumentElement = document.documentElement; // Renamed to avoid any conflicts
-
-    lightModeButtonMobile.addEventListener('click', function () {
-        htmlDocumentElement.classList.remove('dark'); // Remove 'dark' class from <html>
-        lightModeButtonMobile.style.backgroundColor = '#00A1CC'; // Light mode active color
-        darkModeButtonMobile.style.backgroundColor = 'transparent'; // Dark mode inactive color
-    });
-
-    darkModeButtonMobile.addEventListener('click', function () {
-        htmlDocumentElement.classList.add('dark'); // Add 'dark' class to <html>
-        darkModeButtonMobile.style.backgroundColor = '#00A1CC'; // Dark mode active color
-        lightModeButtonMobile.style.backgroundColor = 'transparent'; // Light mode inactive color
-    });
-</script>
-
-
-    
-      
-
-
-
-
 </body>
 
 </html>

@@ -569,18 +569,33 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const lightModeButtonMobile = document.getElementById('light-mode-mobile');
+  const darkModeButtonMobile = document.getElementById('dark-mode-mobile');
+
   // Function to toggle dark mode based on preference
   function toggleDarkMode(shouldAdd) {
+    document.documentElement.classList.toggle('dark', shouldAdd);
     if (shouldAdd) {
-      document.documentElement.classList.add('dark');
+      darkModeButtonMobile.style.backgroundColor = '#00A1CC'; // Dark mode active color
+      lightModeButtonMobile.style.backgroundColor = 'transparent'; // Light mode inactive color
     } else {
-      document.documentElement.classList.remove('dark');
+      lightModeButtonMobile.style.backgroundColor = '#00A1CC'; // Light mode active color
+      darkModeButtonMobile.style.backgroundColor = 'transparent'; // Dark mode inactive color
     }
   }
 
   // Check the current preference on load
   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   toggleDarkMode(prefersDarkMode);
+
+  // Event listeners for the buttons
+  lightModeButtonMobile.addEventListener('click', function () {
+    toggleDarkMode(false); // Force light mode
+  });
+
+  darkModeButtonMobile.addEventListener('click', function () {
+    toggleDarkMode(true); // Force dark mode
+  });
 });
 
 // Listen for changes in the system theme
