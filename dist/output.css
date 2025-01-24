@@ -1213,10 +1213,6 @@ html,
   --tw-bg-opacity: 0;
 }
 
-.bg-opacity-50{
-  --tw-bg-opacity: 0.5;
-}
-
 .bg-cover{
   background-size: cover;
 }
@@ -1797,10 +1793,6 @@ html,
     width: 33.333333%;
   }
 
-  .md\:w-1\/4{
-    width: 25%;
-  }
-
   .md\:w-full{
     width: 100%;
   }
@@ -1861,6 +1853,10 @@ html,
     width: 33.333333%;
   }
 
+  .lg\:w-1\/4{
+    width: 25%;
+  }
+
   .lg\:w-1\/6{
     width: 16.666667%;
   }
@@ -1871,10 +1867,6 @@ html,
 
   .lg\:w-full{
     width: 100%;
-  }
-
-  .lg\:w-1\/4{
-    width: 25%;
   }
 
   .lg\:max-w-md{
