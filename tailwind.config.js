@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '9': '9',
+      },
       spacing: {
         '120': '120px', // Add custom padding-top 120px
       },

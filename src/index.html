@@ -159,7 +159,7 @@
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white shadow-md hidden z-40">
             <div class="flex flex-col items-center space-y-4 py-6">
                 <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
-                    <button class="flex items-center dark:text-white text-secondary hover:text-primary">
+                    <button class="flex items-center z-10 dark:text-white text-secondary hover:text-primary">
                         English
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -167,50 +167,27 @@
                         </svg>
                     </button>
 
-                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                    <div class="dropdown-menu absolute hidden z-9 bg-white shadow-lg mt-1 rounded-md w-48">
                         <a href="#" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
                         <a href="#" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
                     </div>
                 </div>
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
-                    <button class="flex items-center text-gray-600 hover:text-gray-900">
-                        Track Your Transfer
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
-                    </div>
-                </div>
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
-                    <button class="flex items-center text-gray-600 hover:text-gray-900">
+                <a href="#" class=" text-gray-600  hover:text-gray-900">Track Your Transfer</a>
+                <div class="relative dropdown" onmouseover="this.children[2].style.display = 'block';" onmouseout="this.children[2].style.display = 'none';">
+                    <button class="flex items-center z-10 text-gray-600 hover:text-gray-900">
                         Products
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                    <div class="dropdown-menu absolute hidden z-9 bg-white shadow-lg mt-1 rounded-md w-48">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
                     </div>
                 </div>
-                <a href="#" class="p-4 text-gray-600 hover:text-gray-900">Help Center</a>
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
-                    <button class="flex items-center text-gray-600 hover:text-gray-900">
-                        Help center
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
-                    </div>
-                </div>
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
+                <a href="#" class=" text-gray-600 hover:text-gray-900">Help Center</a>
+
+                <div class="relative dropdown" onmouseover="this.children[3].style.display = 'block';" onmouseout="this.children[3].style.display = 'none';">
                     <button class="flex items-center text-gray-600 hover:text-gray-900">
                        Company
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,6 +200,7 @@
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
                     </div>
                 </div>
+                <a href="#" class=" text-gray-600 hover:text-gray-900">Impact Hub</a>
                 <a href="#" class="bg-secondary dark:bg-primary text-white px-4 py-3 rounded-[15px] flex gap-4"><span class="font-bold  ">Sign up</span>
                 </a>
             </div>
@@ -649,7 +627,7 @@
 
                 <div class="flex flex-wrap justify-center mt-8 gap-6">
                     <!-- Card 1 -->
-                    <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group">
+                    <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4 card group">
                         <img src="../images/choose/img-1.png" alt="Description of Image" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
                         <h2 class="font-semibold text-xl text-center text-white mb-3 group-hover:scale-110 transition-all duration-300 ease-out">Migrant Native</h2>
                         <p class="text-center text-white group-hover:scale-110 transition-all duration-300 ease-out">We understand because we are you. As migrants ourselves, we know how hard-earned your money is. We exist to support you—because we are part of you.</p>
@@ -657,7 +635,7 @@
                     
 
                     <!-- Card 2 -->
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group"
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4 card group"
                         data-tilt>
                         <div class="group">
                             <img src="../images/choose/img-2.png" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -667,7 +645,7 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div data-aos="fade-right" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group"
+                    <div data-aos="fade-right" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4  card group"
                         data-tilt>
                         <div class="group">
                             <img src="../images/choose/img-3.png" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -680,7 +658,7 @@
 
                 <div class="flex flex-wrap justify-center mt-8 gap-6">
                     <!-- Card 1 -->
-                    <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group"
+                    <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4  card group"
                         data-tilt>
                         <div class="group">
                             <img src="../images/choose/img-4.png" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -691,7 +669,7 @@
 
 
                     <!-- Card 2 -->
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group"
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4  card group"
                         data-tilt>
                         <div class="group">
                             <img src="../images/choose/img-5.png" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -701,7 +679,7 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div data-aos="fade-right" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/4 card group"
+                    <div data-aos="fade-right" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 ring-gray-900/10 transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-[#1A90FF] p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full lg:w-1/4  card group"
                         data-tilt>
                         <div class="group">
                             <img src="../images/choose/img-6.png" class="mb-4 transform transition duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -1585,6 +1563,15 @@
             darkModeButton.style.backgroundColor = '#00A1CC'; // For inline styles
             lightModeButton.style.backgroundColor = 'transparent';
         });
+    </script>
+
+<script>
+    function toggleDropdown(event) {
+        let dropdownMenu = event.currentTarget.nextElementSibling;
+        dropdownMenu.classList.toggle('hidden');
+        dropdownMenu.classList.toggle('bg-opacity-50'); // Make the dropdown semi-transparent
+        dropdownMenu.classList.toggle('bg-white'); // Toggle the white background
+    }
     </script>
 
 </body>
