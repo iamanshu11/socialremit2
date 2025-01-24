@@ -612,9 +612,9 @@ function toggle(detailId) {
 
   // Hide all boxes and reset buttons
   allDetailBoxes.forEach(box => {
-      box.classList.add('hidden');
-      box.previousElementSibling.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl'); // Remove active background and text size
-      box.previousElementSibling.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base'); // Add inactive background and default text size
+    box.classList.add('hidden');
+    box.previousElementSibling.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl'); // Remove active background and text size
+    box.previousElementSibling.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base'); // Add inactive background and default text size
   });
 
   // Handle the current box
@@ -622,22 +622,36 @@ function toggle(detailId) {
   const buttonElement = clickedElement.previousElementSibling; // Button is just before the detail box
 
   if (clickedElement.classList.contains('hidden')) {
-      clickedElement.classList.remove('hidden');
-      buttonElement.classList.add('bg-[#00A1CC]', 'text-white', 'text-xl'); // Apply active background and larger text size
-      buttonElement.classList.remove('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
+    clickedElement.classList.remove('hidden');
+    buttonElement.classList.add('bg-[#00A1CC]', 'text-white', 'text-xl'); // Apply active background and larger text size
+    buttonElement.classList.remove('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
   } else {
-      clickedElement.classList.add('hidden');
-      buttonElement.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl');
-      buttonElement.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
+    clickedElement.classList.add('hidden');
+    buttonElement.classList.remove('bg-[#00A1CC]', 'text-white', 'text-xl');
+    buttonElement.classList.add('bg-[#EFF9FB]', 'text-[#428BC1]', 'text-base');
   }
 }
 
 // Activate the second box on page load
-document.addEventListener('DOMContentLoaded', function() {
-  toggle('detail-box1');
+document.addEventListener('DOMContentLoaded', function () {
+  toggle('detail-box2');
 });
 
 
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const flags = document.querySelectorAll(".flag-div");
+  // Initially hide all flags except the first three
+  for (let i = 2; i < flags.length; i++) {
+      flags[i].style.display = 'none';
+  }
+
+  // Add click event listener to the button
+  document.getElementById('viewAllButton').addEventListener('click', function() {
+      for (let i = 3; i < flags.length; i++) {
+          flags[i].style.display = flags[i].style.display === 'none' ? '' : 'none';
+      }
+  });
+});

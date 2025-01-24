@@ -17,11 +17,11 @@
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center py-4">
             <!-- Logo Section -->
             <div class=" flex items-center  space-x-4">
-                <img src="../images/logo.png" alt="VeloxPays Logo" class="" width="120px" />
+                <img src="../images/logo.png" alt="social remit Logo" class="" width="120px" />
                 
             </div>
 
-            <div class="md:hidden space-x-4 flex items-center justify-between bg-secondary cursor-pointer rounded-[15px]">
+            <div class="lg:hidden space-x-4 flex items-center justify-between bg-secondary cursor-pointer rounded-[15px]">
                 <!-- Sun Icon (Light Mode Button) -->
                 <button id="light-mode-mobile"
                     class="flex items-center justify-center bg-active-blue rounded-l-[15px] text-white w-12 h-12 focus:outline-none ">
@@ -36,7 +36,7 @@
 
            
 
-            <div class="hidden  md:flex items-center space-x-4">
+            <div class="hidden  lg:flex items-center space-x-4">
                 <nav class="flex gap-4">
                     <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
                         <button class="flex items-center dark:text-primary text-primary hover:text-primary">
@@ -90,7 +90,7 @@
             </div>
 
             <!-- Navigation Links for Desktop -->
-            <div class="hidden md:flex items-center space-x-4">
+            <div class="hidden lg:flex items-center space-x-4">
                 <!-- <a href="#" class="text-gray-700 ">Help center</a>
                 <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
                     <button class="flex items-center text-gray-600 hover:text-gray-900">
@@ -143,7 +143,7 @@
             </div>
 
 
-            <button class="md:hidden text-black dark:text-white" id="burger-menu">
+            <button class="lg:hidden text-black dark:text-white" id="burger-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" id="burger-icon">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -234,16 +234,18 @@
     <main>
 
     
-        <section  class="h-auto lg:min-h-screen bg-white dark:bg-[#010C23] text-white pt-120 py-16 pb-6 flex  justify-center bg-cover bg-no-repeat">
+        <section  class="h-auto lg:min-h-screen bg-white dark:bg-[#010C23] text-white pt-120 py-16 pb-6 relative flex  justify-center bg-cover bg-no-repeat">
             <div class="earth">
             </div>
             <div  class="container px-6 lg:px-10 mx-auto flex flex-col lg:flex-row  lg:justify-between z-10">
                 <!-- Left Section -->
-                <div class="lg:w-[70%] md:w-[80%] mb-12 lg:mb-0 " data-aos="fade-left" data-aos-duration="1000">
+                <div class="lg:w-[70%]  mb-12 lg:mb-0 " data-aos="fade-left" data-aos-duration="1000">
                     <div class="text-left space-y-4 lg:w-full">
-                        <h1 class="text-3xl lg:text-5xl font-bold text-secondary dark:text-white">Your money work better <br> when it’s <span class="text-primary"> all in one app.</span></h1>
-                        <img src="../images/tag-line.png" alt="" class="">
-                        <form class="relative lg:w-[70%] md:w-[80%] bg-primary px-5 py-2.5 rounded-lg hidden xl:block">
+                        <h1 class="text-3xl lg:text-5xl font-bold text-secondary dark:text-white">Send More Than Money, <span class="text-primary"> Home Receives</span>  More Than Ever.
+                        </h1>
+                        <!-- <img src="../images/tag-line.png" alt="" class=""> -->
+                         <h4 class="text-2xl lg:text-3xl font-medium  text-secondary dark:text-white">Secure transfers that bring more value home</h4>
+                        <form class="relative lg:w-[70%]  bg-primary px-5 py-2.5 rounded-lg hidden xl:block">
                             <div class="flex items-center gap-4">
                                 <div class="bg-white rounded-lg p-2">
                                     <img src="../images/qr.png" alt="Download Now QR Code" class=" ">
@@ -257,7 +259,7 @@
                             </div>
                         </form>
                        
-                        <div class="hidden xl:block bg-primary rounded-lg p-4 text-white xl:w-[70%] md:w-[80%] my-4">
+                        <div class="hidden xl:block bg-primary rounded-lg p-4 text-white xl:w-[70%]  my-4">
                            
                             <div class="flex items-center  space-x-2 mb-4">
                                 <!-- Buttons for toggling forms -->
@@ -272,6 +274,9 @@
                                         <img src="../images/social-playstore.png" alt="Download on the Google Play Store">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="space-x-2 mb-4">
+                                <p class="text-white">Download Our App and Start Sending Now</p>
                             </div>
                             
 
@@ -332,7 +337,7 @@
                             </div>
                         </div>
 
-                        <div class="xl:hidden bg-primary rounded-lg p-4 text-white lg:w-[70%] md:w-[80%] w-full  my-4">
+                        <div class="xl:hidden bg-primary rounded-lg p-4 text-white lg:w-[70%]  w-full  my-4">
                             <p class="text-white text-center text-lg max-w-2xl mx-auto mb-8">
                                 Download Mobile App
                             </p>
@@ -363,7 +368,7 @@
 
                 <div class=" lg:flex lg:w-1/2 flex-col items-center  relative" data-aos="fade-right"
                     data-aos-duration="1000">
-                    <div class="relative w-full max-w-md shadow-md h-full rounded-xl bg-primary px-4 py-4">
+                    <div class="relative w-full lg:max-w-md md:w-full shadow-md h-full rounded-xl bg-primary px-4 py-4">
                         <form class="relative">
                             <!-- Input Section for Sending Money -->
                 
@@ -592,7 +597,7 @@
 
                         </form>
                     </div>
-                    <a href="" class="block w-full max-w-md bg-[#1F1645] hover:bg-[#38297A] text- dark:bg-[#00A1CC] dark:hover:bg-[#54CEEE] dark:text-[#1F1645] text-white text-lg font-medium py-4 mt-6 rounded-[10px]  text-center">
+                    <a href="" class="block w-full lg:max-w-md md:w-full bg-[#1F1645] hover:bg-[#38297A] text- dark:bg-[#00A1CC] dark:hover:bg-[#54CEEE] dark:text-[#1F1645] text-white text-lg font-medium py-4 mt-6 rounded-[10px]  text-center">
                         Claim Your Rate Now
                     </a>
                 </div>
@@ -636,7 +641,7 @@
 
         <section class="py-6 bg-white dark:bg-[#010C23]">
             <div class="container mx-auto px-6 lg:px-10 py-8">
-                <div class="flex flex-col lg:flex-row ">
+                <div class="flex flex-col lg:flex-row items-center">
                     <!-- Image Section -->
                     <div class="flex-1 relative group" data-aos="fade-up" data-aos-duration="1000">
                         <!-- Main Image -->
@@ -656,8 +661,8 @@
                                     <img src="../images/how-ic/ic-1.png" alt="Icon for downloading app" class="h-full w-full object-cover ">
                                 </div>
                                 <div class="flex-grow min-w-0">
-                                    <p class="font-bold text-secondary dark:text-white">Download the Social Remit App and Sign Up!</p>
-                                    <p class="text-secondary dark:text-white">Hit that sign-up button, enter your email, and set a password (make it strong, like a superhero's shield). Boom—you're in!</p>
+                                    <p class="font-bold text-secondary dark:text-white">Download and Sign Up</p>
+                                    <p class="text-secondary dark:text-white">Hit the sign-up button, enter your email, and create a strong password. You’re in easy and quick!</p>
                                 </div>
                             </li>
                             <li class="flex items-start space-x-4 mb-4">
@@ -666,7 +671,7 @@
                                 </div>
                                 <div class="flex-grow min-w-0">
                                     <p class="font-bold text-secondary dark:text-white">Verify Your Details</p>
-                                    <p class="text-secondary dark:text-white">A quick ID check to keep things safe and sound. Don't worry—it's faster than making popcorn!</p>
+                                    <p class="text-secondary dark:text-white">Complete a quick ID check to keep your account secure. It’s easy, hassle-free, and faster than popping popcorn!"</p>
                                 </div>
                             </li>
                             <li class="flex items-start space-x-4 mb-4">
@@ -674,8 +679,8 @@
                                     <img src="../images/how-ic/ic-3.png" alt="Icon for picking a spot" class="h-full w-full object-cover ">
                                 </div>
                                 <div class="flex-grow min-w-0">
-                                    <p class="font-bold text-secondary dark:text-white">Pick Your Spot</p>
-                                    <p class="text-secondary dark:text-white">Where's your money headed? Select the country, how your receiver will get it, and type in the amount. (We'll show you fees upfront because surprises are for birthdays, not transfers.)</p>
+                                    <p class="font-bold text-secondary dark:text-white">Choose Destination</p>
+                                    <p class="text-secondary dark:text-white">Pick where your money is going, how it’ll be received (cash, mobile wallet, or bank), and the amount. No hidden fees—because surprises are for birthdays, not transfers!</p>
                                 </div>
                             </li>
                             <li class="flex items-start space-x-4 mb-4">
@@ -683,8 +688,8 @@
                                     <img src="../images/how-ic/ic-4.png" alt="Icon for adding receiver details" class="h-full w-full object-cover ">
                                 </div>
                                 <div class="flex-grow min-w-0">
-                                    <p class="font-bold text-secondary dark:text-white">Add Receiver Details</p>
-                                    <p class="text-secondary dark:text-white">Fill in your receiver's details—easy peasy! Just have their info handy, and you're golden.</p>
+                                    <p class="font-bold text-secondary dark:text-white">Add Receiver Info</p>
+                                    <p class="text-secondary dark:text-white">Fill in your recipient’s details. Simple and quick—just have their info handy.</p>
                                 </div>
                             </li>
                             <li class="flex items-start space-x-4 mb-4">
@@ -692,13 +697,13 @@
                                     <img src="../images/how-ic/ic-5.png" alt="Icon for payment options" class="h-full w-full object-cover ">
                                 </div>
                                 <div class="flex-grow min-w-0">
-                                    <p class="font-bold text-secondary dark:text-white">Pay Up and Chill!</p>
-                                    <p class="text-secondary dark:text-white">Choose how you want to pay: bank deposit, credit card, or debit card. Hit send, sit back, and let us handle the rest. High-fives all around!</p>
+                                    <p class="font-bold text-secondary dark:text-white">Pay and Chill</p>
+                                    <p class="text-secondary dark:text-white">Choose how to pay, hit send, and relax. We’ll handle the rest in minutes!</p>
                                 </div>
                             </li>
                         </ul>
                         <a href="" class="block w-full max-w-md bg-[#1F1645] hover:bg-[#38297A] text- dark:bg-[#00A1CC] dark:hover:bg-[#54CEEE] dark:text-[#1F1645] text-white text-lg font-medium py-4 mt-6 rounded-[10px]  text-center">
-                            Claim Your Rate Now
+                            Start Sending Now
                         </a>
                         
                         
@@ -785,51 +790,114 @@
                     </h1>
                     <!-- <p class="mt-4 text-black">Why Business of all sizes choose Social Remit</p> -->
                 </div>
-                <div class="flex overflow-auto lg:justify-center space-x-0 sm:space-x-4 mt-8 mb-8 snap-x snap-mandatory">
+                <div class=" hidden lg:flex overflow-auto lg:justify-center space-x-0 sm:space-x-4 mt-8 mb-8 snap-x snap-mandatory">
                     <!-- Each upper box has a corresponding detail box right below it -->
                     <!-- Other boxes remain the same, just ensure they follow the same pattern -->
                     <div class="group cursor-pointer w-full sm:w-auto snap-center flex-shrink-0" data-aos="fade-left" data-aos-duration="1000">
                         <div onclick="toggle('detail-box1')" class="flex flex-col items-center p-4 rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
-                            <div class="text-lg font-bold">Money Mobile</div>
-                            <img src="../images/way-ic/ic-1.png" alt="Money Mobile" class="w-10 h-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                              </svg>
+                            <div class="text-lg font-bold mt-4">Mobile Money</div> 
                         </div>
                         <div id="detail-box1" class="hidden detail-box max-w-md p-4 border rounded-lg bg-[#94E8FF] text-black mt-2 relative">
                             <div class="triangle"></div>
-                            Transfer money for cash pickup at hundreds of thousands of Western Union agent locations around the world. Simply find the nearest agent location
+                            Send money instantly to mobile wallets for your loved ones or to your own wallet back home. Simple, fast, and supported by all major telecom networks.
                         </div>
                     </div>
                     <div class="group cursor-pointer w-full sm:w-auto snap-center flex-shrink-0" data-aos="fade-left" data-aos-duration="1000">
-                        <div onclick="toggle('detail-box2')" class="flex flex-col items-center p-4 border rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
-                            <div class="text-lg font-bold">Cash Pickup</div>
-                            <img src="../images/way-ic/ic-2.png" alt="Money Mobile" class="w-10 h-10">
+                        <div onclick="toggle('detail-box2')" class="flex flex-col items-center p-4  rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                              </svg>
+                            <div class="text-lg font-bold mt-4">Bank Deposit</div>
+                           
                         </div>
                         <div id="detail-box2" class="detail-box max-w-md p-4 border rounded-lg bg-[#94E8FF] text-black mt-2 relative">
                             <div class="triangle"></div>
-                            Transfer money for cash pickup at hundreds of thousands of Western Union agent locations around the world. Simply find the nearest agent location
+                            Transfer money directly into a bank account whether it’s for your loved ones or your own back home. Quick, secure, and convenient every time.
                         </div>
                     </div>
         
                     <div class="group cursor-pointer w-full sm:w-auto snap-center flex-shrink-0" data-aos="fade-right" data-aos-duration="1000">
-                        <div onclick="toggle('detail-box3')" class="flex flex-col items-center p-4 border rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
-                            <div class="text-lg font-bold">Bank Deposit</div>
-                            <img src="../images/way-ic/ic-3.png" alt="Money Mobile" class="w-10 h-10">
+                        <div onclick="toggle('detail-box3')" class="flex flex-col items-center p-4  rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                              </svg>
+                            <div class="text-lg font-bold mt-4">Cash Pickup</div>
+                            
+                              
                         </div>
                         <div id="detail-box3" class="detail-box max-w-md p-4 border rounded-lg bg-[#94E8FF] text-black mt-2 relative">
                             <div class="triangle"></div>
-                            Transfer money for cash pickup at hundreds of thousands of Western Union agent locations around the world. Simply find the nearest agent location
+                            Send cash for your loved ones to collect at thousands of secure locations. Fast, reliable, and there when it’s needed most.
                         </div>
                     </div>
                     <div class="group cursor-pointer w-full sm:w-auto snap-center flex-shrink-0" data-aos="fade-right" data-aos-duration="1000">
-                        <div onclick="toggle('detail-box4')" class="flex flex-col items-center p-4 border rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
-                            <div class="text-lg font-bold">Airtime Top-up</div>
-                            <img src="../images/way-ic/ic-1.png" alt="Money Mobile" class="w-10 h-10">
+                        <div onclick="toggle('detail-box4')" class="flex flex-col items-center p-4  rounded-lg bg-[#EFF9FB] text-[#428BC1] transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                              </svg>
+
+                            <div class="text-lg font-bold mt-4">Airtime Top-Up</div>
+                            
                         </div>
                         <div id="detail-box4" class="detail-box max-w-md p-4 border rounded-lg bg-[#94E8FF] text-black mt-2 relative">
                             <div class="triangle"></div>
-                            Transfer money for cash pickup at hundreds of thousands of Western Union agent locations around the world. Simply find the nearest agent location
+                            Recharge mobile phones for your loved ones back home, or your own, with just a few clicks. Stay connected effortlessly and instantly from the comfort of your home.
                         </div>
                     </div>
                 </div>
+
+                <div class="lg:hidden flex flex-wrap justify-center mt-8 gap-6">
+                    <!-- Card 1 -->
+                    <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 text-white  transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-primary  p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/3 card group">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 group-hover:scale-110 transition-all duration-600 ease-out">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                          </svg>
+                        <h2 class="font-semibold text-xl text-center text-white mt-4 mb-3 group-hover:scale-110 transition-all duration-600 ease-out">Mobile Money</h2>
+                        <p class="text-center text-white group-hover:scale-110 transition-all duration-600 ease-out">Send money instantly to mobile wallets for your loved ones—or to your own wallet back home. Simple, fast, and supported by all major telecom networks.</p>
+                    </div>
+                    
+
+                    <!-- Card 2 -->
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 text-white transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-primary   p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/3 card group"
+                        data-tilt>
+                        <div class="group mb-4 group-hover:scale-110 transition-all duration-600 ease-out">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                              </svg>
+                        </div>
+                        <h2 class="font-semibold text-xl text-center text-white mb-3 group-hover:scale-110 transition-all duration-600 ease-out">Bank Deposit</h2>
+                        <p class="text-center text-white group-hover:scale-110 transition-all duration-600 ease-out">Transfer money directly into a bank account—whether it’s for your loved ones or your own back home. Quick, secure, and convenient every time.</p>
+                    </div>
+                </div>
+                <div class="lg:hidden flex flex-wrap justify-center mt-8 gap-6">
+                     <!-- Card 3 -->
+                     <div data-aos="fade-right" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 text-white  transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-primary  p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/3 card group"
+                     data-tilt>
+                     <div class="group mb-4 group-hover:scale-110 transition-all duration-600 ease-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                          </svg>
+                     </div>
+                     <h2 class="font-semibold text-xl text-center text-white mb-3 group-hover:scale-110 transition-all duration-600 ease-out">Cash Pickup</h2>
+                     <p class="text-center text-white group-hover:scale-110 transition-all duration-600 ease-out">Send cash for your loved ones to collect at thousands of secure locations. Fast, reliable, and there when it’s needed most.</p>
+                 </div>
+
+                 <div data-aos="fade-left" data-aos-duration="1000" class="card-tilt transform-gpu place-items-center ring-2 text-white  transition-all duration-300 ease-out cursor-pointer flex flex-col items-center justify-center bg-primary  p-6 pb-16 rounded-tr-[20px] rounded-tl-[20px] rounded-br-[20px] shadow-md w-full md:w-1/3 card group"
+                     data-tilt>
+                     <div class="group mb-4 group-hover:scale-110 transition-all duration-600 ease-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                          </svg>
+                     </div>
+                     <h2 class="font-semibold text-xl text-center text-white mb-3 group-hover:scale-110 transition-all duration-600 ease-out">Airtime Top-Up</h2>
+                     <p class="text-center text-white group-hover:scale-110 transition-all duration-600 ease-out">Recharge mobile phones for your loved ones back home, or your own, with just a few clicks. Stay connected effortlessly and instantly from the comfort of your home.</p>
+                 </div>
+
+                </div>
+
             </div>
         </section>
         
@@ -916,9 +984,9 @@
                     </h1>
                     <!-- <p class="mt-4 text-black">Why Business of all sizes choose Social Remit</p> -->
                 </div>
-                <div class="mx-auto flex flex-col-reverse md:flex-row items-center gap-6 mt-10">
+                <div class="mx-auto flex flex-col-reverse lg:flex-row items-center gap-6 mt-10">
                     <!-- Text Section -->
-                    <div class="md:w-1/2 text-center md:text-left px-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="lg:w-1/2 text-center md:text-left px-4" data-aos="fade-up" data-aos-duration="1000">
                         <ul class="list-none p-0 mt-5 text-left">
                             <li class="flex items-start space-x-4 mb-4">
                                 <div class="flex-shrink-0 p-2 bg-transparent border border-primary " style="width: 60px; height: 60px;">
@@ -963,7 +1031,7 @@
                         </ul>
                     </div>
                     <!-- Image Section -->
-                    <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 px-4 card-tilt transform-gpu backdrop-blur-lg transition-all duration-300 ease-out cursor-pointer" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="lg:w-1/2 flex justify-center mt-8 md:mt-0 px-4 card-tilt transform-gpu backdrop-blur-lg transition-all duration-300 ease-out cursor-pointer" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/social-phone.png" alt="Phone " class="w-full">
                     </div>
                 </div>
@@ -977,80 +1045,172 @@
                     </h1>
                     <!-- <p class="mt-4 text-black">Why Business of all sizes choose Social Remit</p> -->
                 </div>
-                <div class="flex flex-wrap justify-center mt-8 gap-6">
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg dark:border dark:border-primary dark:text-white dark:bg-transparent flex-none" data-aos="fade-left" data-aos-duration="1000">
+                <div class="flex flex-wrap justify-center mt-8 gap-6 flag-div">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg dark:border dark:border-primary dark:text-white dark:bg-transparent flex-none" data-aos="fade-left" data-aos-duration="1000">
                         <img src="../images/send-money-flag/indonesia.png" alt="Indonesia" class="w-8 mr-2">
                         <span>INDONESIA</span>
+                        <!-- Arrow icon in the top-right corner -->
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full  items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full  items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/send-money-flag/bulgaria.png" alt="Bulgaria" class="w-8 mr-2">
                         <span>BULGARIA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full  items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full  items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
                         <img src="../images/send-money-flag/USA.png" alt="United States" class="w-8 mr-2">
                         <span>UNITED STATES</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-center mt-4 gap-6">
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
+                <div class=" flex flex-wrap justify-center mt-4 gap-6 flag-div">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
                         <img src="../images/send-money-flag/pakistan.png" alt="Indonesia" class="w-8 mr-2">
                         <span>PAKISTAN</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/send-money-flag/canada.png" alt="Bulgaria" class="w-8 mr-2">
                         <span>CANADA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
                         <img src="../images/send-money-flag/india.png" alt="United States" class="w-8 mr-2">
                         <span>INDIA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-center mt-4 gap-6">
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
+                <div class=" flex flex-wrap justify-center mt-4 gap-6 flag-div">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
                         <img src="../images/send-money-flag/brazil.png" alt="Indonesia" class="w-8 mr-2">
                         <span>BRAZIL</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/send-money-flag/france.png" alt="Bulgaria" class="w-8 mr-2">
                         <span>FRANCE</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
                         <img src="../images/send-money-flag/austria.png" alt="United States" class="w-8 mr-2">
                         <span>AUSTRIA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-center mt-4 gap-6">
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
+                <div class=" flex flex-wrap justify-center mt-4 gap-6 flag-div">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000">
                         <img src="../images/send-money-flag/korea.png" alt="Indonesia" class="w-8 mr-2">
                         <span>SOUTH KOREA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
+                    <div class=" relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/send-money-flag/italy.png" alt="Bulgaria" class="w-8 mr-2">
                         <span>ITALY</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
                         <img src="../images/send-money-flag/germany.png" alt="United States" class="w-8 mr-2">
                         <span>GERMANY</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-center mt-4 gap-6">
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000"> 
+                <div class="flex flex-wrap justify-center mt-4 gap-6 flag-div">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-left" data-aos-duration="1000"> 
                         <img src="../images/send-money-flag/mexico.png" alt="Indonesia" class="w-8 mr-2">
                         <span>MEXICO</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-up" data-aos-duration="1000">
                         <img src="../images/send-money-flag/belgium.png" alt="Bulgaria" class="w-8 mr-2">
                         <span>BELGIUM</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative flex lg:w-1/6 w-full items-center p-2 bg-[#B8EBFF] shadow rounded-lg flex-none dark:border dark:border-primary dark:text-white dark:bg-transparent" data-aos="fade-right" data-aos-duration="1000">
                         <img src="../images/send-money-flag/china.png" alt="United States" class="w-8 mr-2">
                         <span>CHINA</span>
+
+                        <button onclick="" class="absolute top-0 right-0 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
+
                 <div class="flex justify-center">
-                    <a href="" class="block w-full max-w-md bg-[#1F1645] hover:bg-[#38297A] text- dark:bg-[#00A1CC] dark:hover:bg-[#54CEEE] dark:text-[#1F1645] text-white text-lg font-medium py-4 mt-6 rounded-[10px]  text-center">
+                    <button id="viewAllButton"
+                        class="block w-full max-w-md bg-[#1F1645] hover:bg-[#38297A] text- dark:bg-[#00A1CC] dark:hover:bg-[#54CEEE] dark:text-[#1F1645] text-white text-lg font-medium py-4 mt-6 rounded-[10px] text-center">
                         View all Countries
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -1058,9 +1218,9 @@
         <section class="py-16 bg-white dark:bg-[#010C23]">
             <div class="container mx-auto px-6 lg:px-10 ">
                 <div
-                    class="bg-white dark:bg-[#010C23]  flex flex-col md:flex-row   p-4 lg:py-8 rounded-lg border shadow-lg max-w-screen-xl mx-auto gap-6">
+                    class="bg-white dark:bg-[#010C23]  flex flex-col lg:flex-row items-center  p-4 lg:py-8 rounded-lg border shadow-lg max-w-screen-xl mx-auto gap-6">
                     <!-- QR Code Section -->
-                    <div class="flex-none lg:p-8 p-4 border rounded-[10px] border-primary lg:w-1/3 w-full" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex-none lg:p-8 p-4 border rounded-[10px] border-primary lg:w-1/3 md:max-w-md w-full" data-aos="fade-left" data-aos-duration="1000">
                         <img src="../images/large-qr.png" alt="QR Code" class=""> <!-- Adjust the path -->
                     </div>
                     <!-- Content Section -->
@@ -1399,7 +1559,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillatilt@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js" integrity="sha384-DkJbDTY+uSHYNceDbBKr8o1DUWy8eLSoB3d9oz3x40m5VNS8U9WyT5NBO2UftcGz" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/heroicons.min.js"></script>
     <script src="../src/js/script.js"></script>
 
     <script>
