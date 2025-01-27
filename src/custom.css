@@ -73,3 +73,7 @@ body
     }
   }
   
+
+  .diagonal-split-background{
+    background-image: -webkit-linear-gradient(-7deg, #fff 42%, #00AACE 43%);
+  }

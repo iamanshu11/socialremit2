@@ -15,7 +15,7 @@ module.exports = {
       },
       colors: {
         'active-blue': '#00A1CC',
-        'primary': '#00A1CC',
+        'primary': '#00AACE',
         'secondary': '#1F1645',
       },
       backgroundImage: {
