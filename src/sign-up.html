@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Remit</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="../src/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-white dark:bg-[#140E30] shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center py-4">
+            <!-- Logo Section -->
+            <div class=" flex items-center  space-x-4">
+                <a href="index.html"><img src="../images/logo.png" alt="social remit Logo" class="" width="120px" />
+                </a>
+                
+            </div>
+
+            <div
+                class="lg:hidden space-x-4 flex items-center justify-between bg-secondary cursor-pointer rounded-[15px]">
+                <!-- Sun Icon (Light Mode Button) -->
+                <button id="light-mode-mobile"
+                    class="flex items-center justify-center bg-active-blue rounded-l-[15px] text-white w-12 h-12 focus:outline-none ">
+                    <span role="img" aria-label="Light Mode">🌞</span>
+                </button>
+                <!-- Moon Icon (Dark Mode Button) -->
+                <button id="dark-mode-mobile"
+                    class="flex items-center justify-center bg-transparent text-white rounded-r-[15px] w-12 h-12 focus:outline-none">
+                    <span role="img" aria-label="Dark Mode">🌜</span>
+                </button>
+            </div>
+
+
+
+            <div class="hidden  lg:flex items-center space-x-4">
+                <nav class="flex gap-4">
+                    <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
+                        onmouseout="this.children[1].style.display = 'none';">
+                        <button class="flex items-center dark:text-primary text-primary hover:text-primary">
+                            English
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
+                        </div>
+                    </div>
+                    <a href="track-your-transfer.html" class="dark:text-white text-secondary hover:text-primary">Track Your Transfer</a>
+
+
+                    <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
+                        onmouseout="this.children[1].style.display = 'none';">
+                        <button class="flex items-center dark:text-white text-secondary hover:text-primary">
+                            Products
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
+                        </div>
+                    </div>
+                    <a href="#" class="dark:text-white text-secondary hover:text-primary">Help center</a>
+                    <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
+                        onmouseout="this.children[1].style.display = 'none';">
+                        <button class="flex items-center dark:text-white text-secondary hover:text-primary">
+                            Company
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
+                            <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="dark:text-white text-secondary hover:text-primary">Impact Hub</a>
+
+                </nav>
+            </div>
+
+            <!-- Navigation Links for Desktop -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <!-- <a href="#" class="text-gray-700 ">Help center</a>
+                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
+                    <button class="flex items-center text-gray-600 hover:text-gray-900">
+                        Company
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                   
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                    </div>
+                </div>
+                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';" onmouseout="this.children[1].style.display = 'none';">
+                    <button class="flex items-center text-gray-600 hover:text-gray-900">
+                        Impact Hub
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                    </div>
+                </div> -->
+                <div class="flex items-center justify-between bg-secondary cursor-pointer rounded-[15px]">
+                    <!-- Sun Icon (Light Mode Button) -->
+                    <button id="light-mode"
+                        class="flex items-center justify-center bg-active-blue rounded-l-[15px] text-white w-12 h-12 focus:outline-none ">
+                        <span role="img" aria-label="Light Mode">🌞</span>
+                    </button>
+                    <!-- Moon Icon (Dark Mode Button) -->
+                    <button id="dark-mode"
+                        class="flex items-center justify-center bg-transparent text-white rounded-r-[15px] w-12 h-12 focus:outline-none">
+                        <span role="img" aria-label="Dark Mode">🌜</span>
+                    </button>
+                </div>
+                <a href="index.html"
+                    class="bg-secondary dark:bg-primary text-white px-4 py-3 rounded-[15px] flex gap-4"><span
+                        class="font-bold  ">Back</span>
+                </a>
+
+
+
+                <!-- <a href="#" class="bg-secondary text-white px-4 py-2 rounded-[10px] flex gap-4"><span class="font-bold  ">Download
+                        App</span>
+                    <div class="flex items-center gap-2">
+                        <img src="../images/social-apple.png" alt="" class="">
+                        <img src="../images/social-playstore.png" alt="" class="">
+                    </div>
+                </a> -->
+            </div>
+
+
+            <button class="lg:hidden text-black dark:text-white" id="burger-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" id="burger-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 hidden" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" id="close-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white dark:bg-[#010C23] shadow-md hidden z-40">
+            <div class="flex flex-col items-center space-y-4 py-6">
+                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
+                    onmouseout="this.children[1].style.display = 'none';">
+                    <button class="flex items-center z-10 dark:text-white text-secondary hover:text-primary">
+                        English
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="dropdown-menu absolute hidden z-9 bg-white shadow-lg mt-1 rounded-md w-48">
+                        <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
+                        <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
+                    </div>
+                </div>
+                <a href="track-your-transfer.html" class=" dark:text-white text-secondary  hover:text-gray-900">Track Your Transfer</a>
+                <div class="relative dropdown" onmouseover="this.children[2].style.display = 'block';"
+                    onmouseout="this.children[2].style.display = 'none';">
+                    <button class="flex items-center z-10 dark:text-white text-secondary hover:text-gray-900">
+                        Products
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu absolute hidden z-9 bg-white shadow-lg mt-1 rounded-md w-48">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
+                    </div>
+                </div>
+                <a href="#" class=" dark:text-white text-secondary hover:text-gray-900">Help Center</a>
+
+                <div class="relative dropdown" onmouseover="this.children[3].style.display = 'block';"
+                    onmouseout="this.children[3].style.display = 'none';">
+                    <button class="flex items-center dark:text-white text-secondary hover:text-gray-900">
+                        Company
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
+                        <a href="coming-soon.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
+                        <a href="coming-soon.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
+                    </div>
+                </div>
+                <a href="#" class=" dark:text-white text-secondary hover:text-gray-900">Impact Hub</a>
+                <a href="index.html"
+                    class="bg-secondary dark:bg-primary text-white px-4 py-3 rounded-[15px] flex gap-4"><span
+                        class="font-bold  ">Back</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+
+
+        <section
+            class="h-auto lg:min-h-screen bg-white dark:bg-[#010C23] text-white pt-120 py-16  relative flex justify-end bg-cover bg-no-repeat"
+            style="background-image: url('../images/sign-up.png')">
+            <!-- <div class="earth">
+                    </div> -->
+            <div class="container px-6 lg:px-10 mx-auto flex flex-col lg:flex-row lg:items-start lg:justify-end z-10">
+                <div class="flex w-full lg:w-1/2 flex-col items-center lg:items-end relative" data-aos="fade-left"
+                    data-aos-duration="1000">
+                    <div class="w-full lg:max-w-md md:w-full shadow-md h-full rounded-xl bg-primary px-4 py-4">
+                        <form action="#" method="POST" class="space-y-6">
+                            <div id="smsForm" style="display: block;" class="mb-4  phone-input">
+                                <label for="phone" class="block text-purple-secondary mb-3">Phone</label>
+                                <div class="mt-1 flex   rounded-md shadow-sm">
+                                    <div class="relative bg-[#D2F6FF] rounded-md flex-shrink-0">
+                                        <button type="button"
+                                            class="flex items-center px-4 pr-8 py-3 rounded-l-[10px] focus:outline-none country-code-btn bg-[#D2F6FF] text-black">
+                                            <img class="phone-flag w-6 h-6 mr-2" src="../images/money-flag/ghana.png"
+                                                alt="Ghana">
+                                            <span class="country-code">+233</span>
+                                            <svg id="dropdown-icon"
+                                                class="w-5 h-5 text-black ml-2 transition-transform transform"
+                                                fill="currentColor" stroke="currentColor" stroke-width="2"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <!-- Dropdown -->
+                                        <div
+                                            class="absolute z-10 bg-[#003C74] border rounded-md mt-1 max-h-60 overflow-y-auto hidden country-code-list">
+                                            <!-- Search Bar -->
+                                            <input type="text"
+                                                class="w-full px-3 py-3 bg-white text-gray-800 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 search-input"
+                                                placeholder="Search...">
+                                            <ul class="country-code-options">
+                                                <!-- Country Options -->
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+233" data-flag="../images/money-flag/ghana.png">
+                                                    <img src="../images/money-flag/ghana.png" alt="Ghana"
+                                                        class="w-10 h-10 mr-2"> Ghana (+233)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+91" data-flag="../images/money-flag/india.png">
+                                                    <img src="../images/money-flag/india.png" alt="India"
+                                                        class="w-10 h-10 mr-2"> India (+91)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+880" data-flag="../images/money-flag/bangladesh.png">
+                                                    <img src="../images/money-flag/bangladesh.png" alt="Bangladesh"
+                                                        class="w-10 h-10 mr-2"> Bangladesh (+880)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+92" data-flag="../images/money-flag/pakistan.png">
+                                                    <img src="../images/money-flag/pakistan.png" alt="Pakistan"
+                                                        class="w-10 h-10 mr-2"> Pakistan (+92)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+94" data-flag="../images/money-flag/sri-lanka.png">
+                                                    <img src="../images/money-flag/sri-lanka.png" alt="Sri Lanka"
+                                                        class="w-10 h-10 mr-2"> Sri Lanka (+94)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+977" data-flag="../images/money-flag/nepal.png">
+                                                    <img src="../images/money-flag/nepal.png" alt="Nepal"
+                                                        class="w-10 h-10 mr-2"> Nepal (+977)
+                                                </li>
+                                                <li class="flex items-center px-4 pr-12 py-2 cursor-pointer hover:bg-blue-500 text-white country-option"
+                                                    data-code="+60" data-flag="../images/money-flag/malaysia.png">
+                                                    <img src="../images/money-flag/malaysia.png" alt="Malaysia"
+                                                        class="w-10 h-10 mr-2"> Malaysia (+60)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="tel"
+                                        class=" flex-grow px-3 py-2 bg-[#D2F6FF] text-black focus:outline-none rounded-r-[10px]  phone-number"
+                                        style="width: 150px;" placeholder="0000000000">
+                                </div>
+                            </div>
+                            <!-- Email Field -->
+                            <div>
+                                <label for="email" class="block text-purple-secondary mb-3">Email</label>
+                                <div class="relative text-black">
+                                    <input type="email" id="email" name="email" placeholder="Enter your email"
+                                        class="w-full px-4 py-3  rounded-lg bg-[#D2F6FF] focus:outline-none">
+                                    <button type="button" class="absolute inset-y-0 right-0 flex items-center px-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div>
+                                <label for="password" class="block text-purple-secondary mb-3">Password</label>
+                                <div class="relative text-black">
+                                    <input type="password" id="password" name="password" placeholder="••••••••"
+                                        class="w-full px-4 py-3  rounded-lg bg-[#D2F6FF] focus:outline-none">
+                                    <button type="button" onclick="togglePassword('password', 'eye-icon-password')"
+                                        class="absolute inset-y-0 right-0 flex items-center px-3">
+                                        <span id="eye-icon-password">
+                                            <!-- Initial SVG here for Password -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div>
+                                <label for="confirm_password" class="block text-purple-secondary mb-3">Confirm
+                                    Password</label>
+                                <div class="relative text-black">
+                                    <input type="password" id="confirm_password" name="confirm_password"
+                                        placeholder="••••••••"
+                                        class="w-full px-4 py-3  rounded-lg bg-[#D2F6FF] focus:outline-none">
+                                    <button type="button"
+                                        onclick="togglePassword('confirm_password', 'eye-icon-confirm')"
+                                        class="absolute inset-y-0 right-0 flex items-center px-3">
+                                        <span id="eye-icon-confirm">
+                                            <!-- Initial SVG here for Confirm Password -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <!-- Checkbox -->
+                            <div class="flex items-center space-x-2">
+                                <input type="checkbox" id="terms"
+                                    class="w-10 h-10  bg-[#D2F6FF] focus:outline-none " />
+                                <label for="terms" class="text-sm text-white">
+                                    By using Social Remit, you agree to our E-sign Disclosure and Consent Notice,
+                                    Privacy
+                                    Policy, and User Agreement.
+                                </label>
+                            </div>
+
+                        </form>
+                    </div>
+                    <a href=""
+                        class="block w-full lg:max-w-md md:w-full bg-[#1F1645] hover:bg-[#38297A] dark:bg-[#0F8482] dark:hover:bg-[#0F8482] dark:text-white text-white text-lg font-medium py-4 mt-6 rounded-[10px] text-center">
+                        Claim Your Rate Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillatilt@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.0/lottie.min.js"
+        integrity="sha384-DkJbDTY+uSHYNceDbBKr8o1DUWy8eLSoB3d9oz3x40m5VNS8U9WyT5NBO2UftcGz" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/heroicons.min.js"></script>
+    <script src="../src/js/script.js"></script>
+
+    <script>
+        const lightModeButton = document.getElementById('light-mode');
+        const darkModeButton = document.getElementById('dark-mode');
+        const htmlElement = document.documentElement;
+
+        lightModeButton.addEventListener('click', function () {
+            htmlElement.classList.remove('dark');
+            lightModeButton.style.backgroundColor = '#00A1CC'; // For inline styles
+            darkModeButton.style.backgroundColor = 'transparent';
+        });
+
+        darkModeButton.addEventListener('click', function () {
+            htmlElement.classList.add('dark');
+            darkModeButton.style.backgroundColor = '#00A1CC'; // For inline styles
+            lightModeButton.style.backgroundColor = 'transparent';
+        });
+    </script>
+
+</body>
+
+</html>

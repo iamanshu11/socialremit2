@@ -3,6 +3,9 @@ module.exports = {
   darkMode: 'class',
   content: [
     './src/index.html',
+    './src/coming-soon.html',
+    './src/sign-up.html',
+    './src/track-your-transfer.html',
 
   ],
   theme: {
