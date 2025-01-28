@@ -2091,4 +2091,14 @@ html,
   .xl\:justify-center{
     justify-content: center;
   }
+
+  .xl\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .xl\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
