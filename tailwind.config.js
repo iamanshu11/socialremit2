@@ -9,12 +9,12 @@ module.exports = {
 
   ],
   theme: {
-    extend: {
+    extend: { 
       zIndex: {
         '9': '9',
       },
       spacing: {
-        '120': '120px', // Add custom padding-top 120px
+        '120': '120px', 
       },
       colors: {
         'active-blue': '#00A1CC',
