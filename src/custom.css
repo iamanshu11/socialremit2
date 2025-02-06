@@ -50,9 +50,9 @@ body
   width: 40%;
   height: 80%;
   position: absolute;
-  top: 7%;
+  top: -4%;
   bottom: 0;
-  left: 50%;
+  left: 58%;
   /* right: 0; */
   margin: auto;
   background-image: url(../images/banner-bg.png);
