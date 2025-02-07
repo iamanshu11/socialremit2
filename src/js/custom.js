@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+
 ( function( $ ) {
 
 	"use strict";
@@ -48,6 +51,7 @@ function selectNationality(countryName, flagUrl) {
     const dropdownList = document.getElementById('nationality-drop-list');
     dropdownList.classList.add('hidden');
 }
+
 
 
 

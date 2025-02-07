@@ -81,3 +81,10 @@ select#bank option {
   background-color: #f9f9f9; /* Light grey background */
   color: black; /* Text color */
 }
+
+.hover-force:hover {
+  background-color: #9da0a1 !important; /* Light mode hover color */
+}
+.dark .hover-force:hover {
+  background-color: #424242 !important; /* Dark mode hover color */
+}

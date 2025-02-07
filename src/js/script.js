@@ -664,3 +664,34 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+
+document.getElementById('allRegions').addEventListener('click', () => filterCountries('All Regions'));
+document.getElementById('africa').addEventListener('click', () => filterCountries('Africa'));
+document.getElementById('asia').addEventListener('click', () => filterCountries('Asia'));
+document.getElementById('europe').addEventListener('click', () => filterCountries('Europe'));
+document.getElementById('americas').addEventListener('click', () => filterCountries('Americas'));
+document.getElementById('middleEast').addEventListener('click', () => filterCountries('Middle East'));
+
+function filterCountries(region) {
+    const cards = document.querySelectorAll('#countryGrid > div');
+    cards.forEach(card => {
+        if (region === 'All Regions' || card.classList.contains(region)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Update button styles
+    const buttons = document.querySelectorAll('.region-button'); // Specific class for region buttons
+    buttons.forEach(button => {
+        if (button.id.toLowerCase() === region.toLowerCase().replace(/\s+/g, '')) {
+            // Apply gradient for active state
+            button.className = 'region-button bg-gradient-to-r dark:bg-gradient-to-l from-blue-400 to-blue-600 text-white py-3 px-4 rounded-[5px] shadow';
+        } else {
+            // Revert to normal state
+            button.className = 'region-button bg-[#E1E1E1] text-[#838383] py-3 px-4 rounded-[5px]';
+        }
+    });
+}
