@@ -74,5 +74,10 @@ body
 
 
 .diagonal-split-background {
-  background-image: -webkit-linear-gradient(-7deg, #fff 42%, #00AACE 43%);
+  background-image: -webkit-linear-gradient(-10deg, #fff 40%, #00ABDC 42%, #0578D0 86%);
+}
+
+select#bank option {
+  background-color: #f9f9f9; /* Light grey background */
+  color: black; /* Text color */
 }
