@@ -1,3 +1,6 @@
+
+
+
 const searchInput = document.querySelector(".residency-search-input");
 const searchFlag = document.querySelector(".residency-search-flag");
 const countryOptions = document.querySelectorAll(".residency-country-option");
@@ -694,4 +697,17 @@ function filterCountries(region) {
             button.className = 'region-button bg-[#E1E1E1] text-[#838383] py-3 px-4 rounded-[5px]';
         }
     });
+}
+
+
+document.getElementById('dropdownButton').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents the default action
+  var dropdownMenu = document.getElementById('dropdownMenu');
+  dropdownMenu.classList.toggle('hidden'); // Toggle the visibility of the dropdown menu
+});
+
+function selectOption(text, svg) {
+  // Update the button to show the selected option with icon
+  document.getElementById('selectedValue').innerHTML = svg + ' ' + text;
+  document.getElementById('dropdownMenu').classList.add('hidden'); // Hide the dropdown menu after selection
 }
