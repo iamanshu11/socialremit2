@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="bg-white dark:bg-[#717B88] shadow-sm fixed w-full top-0 z-50">
+    <header class="bg-white dark:bg-[#080F1C] shadow-sm fixed w-full top-0 z-50">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center py-4">
             <!-- Logo Section -->
             <div class=" flex items-center  space-x-4">
@@ -51,10 +51,10 @@
 
 
             <div class="hidden  lg:flex items-center space-x-4">
-                <nav class="flex gap-4">
+                <nav class="flex items-center gap-4">
                     <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
                         onmouseout="this.children[1].style.display = 'none';">
-                        <button class="flex items-center dark:text-secondary text-secondary hover:text-primary">
+                        <button class="flex items-center dark:text-white text-secondary hover:text-primary">
                             Send Money
                             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -70,28 +70,32 @@
                         </div>
                     </div>
                     <a href="track-your-transfer.html"
-                        class="dark:text-secondary text-secondary hover:text-primary">Track
+                        class="dark:text-white text-secondary hover:text-primary">Track
                         Your Transfer</a>
 
-                    <a href="#" class=" dark:text-secondary hover:text-primary">Help center</a>
+                    <a href="#" class=" dark:text-white hover:text-primary">Help center</a>
 
-                    <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
-                        onmouseout="this.children[1].style.display = 'none';">
-                        <button class="flex items-center dark:text-white text-primary hover:text-primary">
-                            English
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                    <div class="relative  mx-auto ">
+                        <div class="flex items-center justify-between border-b-2 bg-[#00B6DE]/5 dark:text-white rounded-lg px-4 py-2.5 backdrop-blur-xl border border-[#00B6DE]/10 text-[#1E0B4B] transition-all" onclick="toggleDropdown()">
+                            <div id="selectedLanguage" class=" flex items-center gap-3">
+                                <img src="https://flagcdn.com/16x12/us.png" alt="English" class="w-4 h-3"> English
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down ml-2">
+                                <path d="M6 9l6 6 6-6"></path>
                             </svg>
-                        </button>
-
-                        <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
-                            <a href="coming-soon.html"
-                                class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
-                            <a href="coming-soon.html"
-                                class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
+                        </div>
+                        <div id="languageDropdown" class="absolute hidden w-full bg-white z-10">
+                            <div onclick="selectLanguage('English', 'https://flagcdn.com/16x12/us.png')" class="flex items-center gap-3 px-2 py-2 hover:bg-gray-300">
+                                <img src="https://flagcdn.com/16x12/us.png" alt="English" class="w-4 h-3"> English
+                            </div>
+                            <div onclick="selectLanguage('Español', 'https://flagcdn.com/16x12/es.png')" class="flex items-center gap-3 px-2 py-2 hover:bg-gray-300">
+                                <img src="https://flagcdn.com/16x12/es.png" alt="Español" class="w-4 h-3"> Español
+                            </div>
+                            <!-- Add other languages with their flags -->
                         </div>
                     </div>
+                    
+                    
 
                 </nav>
             </div>
@@ -239,7 +243,7 @@
                     class="absolute inset-0 bg-[linear-gradient(rgba(0,182,222,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,182,222,0.05)_1px,transparent_1px)] bg-[length:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]">
                 </div>
             </div>
-            <div class="container px-3 lg:px-10 mx-auto flex flex-col lg:flex-row  lg:justify-between z-10 gap-5">
+            <div class="container px-3 lg:px-10 mx-auto flex flex-col lg:flex-row items-center  lg:justify-between z-10 gap-5">
                 <!-- Left Section -->
                 <div class="lg:w-[50%]  mb-12 lg:mb-0 " data-aos="fade-left" data-aos-duration="1000">
                     <div class="text-left space-y-4 lg:w-full">
@@ -253,12 +257,36 @@
                                 </path>
                             </svg><span class="text-xs md:text-sm font-medium text-black dark:text-white">For Migrants, By Migrants – Join the
                                 Movement</span></div>
-                        <h1 class="text-3xl lg:text-5xl font-bold text-secondary dark:text-white">Make Every Transfer
-                            <br> <span class="text-gradient"> Count More </span>
-                        </h1>
-                        <h4 class="text-xl lg:text-2xl font-medium  text-secondary dark:text-white">Your transfers do
-                            more than move money. They build schools, support communities, and create lasting change.
-                        </h4>
+                                <div class="relative">
+                                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#1E0B4B] dark:text-white">
+                                        <div class="relative inline-block"><span class="relative z-10">Making every</span>
+                                            <div class="absolute -right-8 -top-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" class="lucide lucide-star w-8 h-8 text-[#00B6DE] animate-pulse">
+                                                    <polygon
+                                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                                    </polygon>
+                                                </svg></div>
+                                        </div>
+                                        <div class="relative mt-2 md:mt-4"><span class="block">transfer</span></div>
+                                        <div class="relative mt-2 md:mt-4">
+                                            <div class="relative inline-block group"><span
+                                                    class="relative z-20 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent transform transition-transform duration-500 hover:scale-110">count
+                                                    more</span>
+                                                
+                                            </div>
+                                        </div>
+                                    </h2>
+                                    <div
+                                        class="absolute -right-4 top-0 w-20 h-20 bg-gradient-to-br from-[#00B6DE]/10 to-[#0066CC]/10 rounded-full blur-2xl">
+                                    </div>
+                                    <div
+                                        class="absolute -left-4 bottom-0 w-20 h-20 bg-gradient-to-br from-[#0066CC]/10 to-[#00B6DE]/10 rounded-full blur-2xl">
+                                    </div>
+                                </div>
+                                <h4 class="text-xl lg:text-2xl font-medium  text-secondary dark:text-white">Your transfers do
+                                    more than move money. They build schools, support communities, and create lasting change.
+                                </h4>
 
                         <div class="hidden xl:block">
                             <!-- <div

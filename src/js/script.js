@@ -700,14 +700,12 @@ function filterCountries(region) {
 }
 
 
-document.getElementById('dropdownButton').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevents the default action
-  var dropdownMenu = document.getElementById('dropdownMenu');
-  dropdownMenu.classList.toggle('hidden'); // Toggle the visibility of the dropdown menu
-});
+function toggleDropdown() {
+  document.getElementById('languageDropdown').classList.toggle('hidden');
+}
 
-function selectOption(text, svg) {
-  // Update the button to show the selected option with icon
-  document.getElementById('selectedValue').innerHTML = svg + ' ' + text;
-  document.getElementById('dropdownMenu').classList.add('hidden'); // Hide the dropdown menu after selection
+function selectLanguage(language, flagUrl) {
+  const selectedLanguage = document.getElementById('selectedLanguage');
+  selectedLanguage.innerHTML = `<img src="${flagUrl}" alt="${language}" class="w-4 h-3"> ${language}`;
+  toggleDropdown(); // Close the dropdown after selection
 }
