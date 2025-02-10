@@ -27,7 +27,7 @@ module.exports = {
                 'gradient-to-b': 'linear-gradient(to bottom, #BFEDF6 51%, #FFFFFF 100%)',
                 'gradient-to-card': 'linear-gradient(to bottom, #bfedf657 51%, #bfedf64f 100%)',
                 'gradient-to-card-ui': 'linear-gradient(to bottom, #0D131B 51%, #0D131B 100%)',
-                'gradient-dark': 'linear-gradient(to bottom, #14162C 0%, #1E134D 36%, #1F124F 58%, #14162C 100%)',
+                'gradient-dark': 'radial-gradient(circle at center, #18222F 0%, #10131C 100%)',
                 'text-gradient': 'linear-gradient(to left, #0578D0 0%, #00ABDC 100%)',
             },
             boxShadow: {
