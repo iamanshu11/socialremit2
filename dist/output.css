@@ -954,6 +954,10 @@ html,
   height: 100%;
 }
 
+.h-2{
+  height: 0.5rem;
+}
+
 .max-h-60{
   max-height: 15rem;
 }
@@ -3139,8 +3143,16 @@ html,
     margin-top: 1rem;
   }
 
+  .md\:ml-4{
+    margin-left: 1rem;
+  }
+
   .md\:block{
     display: block;
+  }
+
+  .md\:inline{
+    display: inline;
   }
 
   .md\:flex{
