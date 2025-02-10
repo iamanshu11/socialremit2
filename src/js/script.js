@@ -691,7 +691,7 @@ function filterCountries(region) {
     buttons.forEach(button => {
         if (button.id.toLowerCase() === region.toLowerCase().replace(/\s+/g, '')) {
             // Apply gradient for active state
-            button.className = 'region-button bg-gradient-to-r dark:bg-gradient-to-l from-blue-400 to-blue-600 text-white py-3 px-4 rounded-[5px] shadow';
+            button.className = 'region-button bg-primary  from-blue-400 to-blue-600 text-white py-3 px-4 rounded-[5px] shadow';
         } else {
             // Revert to normal state
             button.className = 'region-button bg-[#E1E1E1] text-[#838383] py-3 px-4 rounded-[5px]';

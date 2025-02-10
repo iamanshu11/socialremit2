@@ -22,6 +22,7 @@ module.exports = {
                 'secondary': '#1F1645',
             },
             backgroundImage: {
+                'gradient-to-white': 'linear-gradient(to top, #FFF 0%, #FFF 100%)',
                 'gradient-to-how': 'linear-gradient(to top, #F1F7FE 0%, #D5E9F9 100%)',
                 'gradient-to-r': 'linear-gradient(to right, #00ABDC, #0578D0)',
                 'gradient-to-l': 'linear-gradient(to right, #24386B, #2F56AC)',
