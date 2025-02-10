@@ -22,10 +22,12 @@ module.exports = {
                 'secondary': '#1F1645',
             },
             backgroundImage: {
+                'gradient-to-how': 'linear-gradient(to top, #F1F7FE 0%, #D5E9F9 100%)',
                 'gradient-to-r': 'linear-gradient(to right, #00ABDC, #0578D0)',
                 'gradient-to-l': 'linear-gradient(to right, #24386B, #2F56AC)',
                 'gradient-to-b': 'linear-gradient(to bottom, #BFEDF6 51%, #FFFFFF 100%)',
-                'gradient-to-card': 'linear-gradient(to bottom, #bfedf657 51%, #bfedf64f 100%)',
+                'gradient-to-card': 'linear-gradient(to bottom, #243345 51%, #243345 100%)',
+                'gradient-to-card-light': 'linear-gradient(to bottom, #E9F9FC 51%, #E9F9FC 100%)',
                 'gradient-to-card-ui': 'linear-gradient(to bottom, #0D131B 51%, #0D131B 100%)',
                 'gradient-dark': 'radial-gradient(circle at center, #18222F 0%, #10131C 100%)',
                 'gradient-dark-how': 'radial-gradient(circle at center, #151B27 0%, #142639 100%)',

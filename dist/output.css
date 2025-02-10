@@ -1638,11 +1638,19 @@ html,
 }
 
 .bg-gradient-to-card{
-  background-image: linear-gradient(to bottom, #bfedf657 51%, #bfedf64f 100%);
+  background-image: linear-gradient(to bottom, #243345 51%, #243345 100%);
+}
+
+.bg-gradient-to-card-light{
+  background-image: linear-gradient(to bottom, #E9F9FC 51%, #E9F9FC 100%);
 }
 
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, #00ABDC, #0578D0);
+}
+
+.bg-gradient-to-how{
+  background-image: linear-gradient(to top, #F1F7FE 0%, #D5E9F9 100%);
 }
 
 .from-\[\#0066CC\]{
@@ -2118,6 +2126,11 @@ html,
   color: rgb(255 255 255 / 0.7);
 }
 
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -2321,6 +2334,10 @@ html,
   border-color: rgb(0 170 206 / var(--tw-border-opacity, 1));
 }
 
+.hover\:border-\[\#00B6DE\]\/20:hover{
+  border-color: rgb(0 182 222 / 0.2);
+}
+
 .hover\:bg-\[\#00B6DE\]\/10:hover{
   background-color: rgb(0 182 222 / 0.1);
 }
@@ -2368,6 +2385,10 @@ html,
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(0 170 206 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#00B6DE\]\/5:hover{
+  background-color: rgb(0 182 222 / 0.05);
 }
 
 .hover\:bg-opacity-75:hover{
@@ -2644,11 +2665,6 @@ html,
   background-color: rgb(20 14 48 / var(--tw-bg-opacity, 1));
 }
 
-.dark\:bg-\[\#141A27\]:is(.dark *){
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 26 39 / var(--tw-bg-opacity, 1));
-}
-
 .dark\:bg-\[\#1c2737\]:is(.dark *){
   --tw-bg-opacity: 1;
   background-color: rgb(28 39 55 / var(--tw-bg-opacity, 1));
@@ -2685,20 +2701,20 @@ html,
   background-image: radial-gradient(circle at center, #18222F 0%, #10131C 100%);
 }
 
+.dark\:bg-gradient-dark-how:is(.dark *){
+  background-image: radial-gradient(circle at center, #151B27 0%, #142639 100%);
+}
+
+.dark\:bg-gradient-to-card:is(.dark *){
+  background-image: linear-gradient(to bottom, #243345 51%, #243345 100%);
+}
+
 .dark\:bg-gradient-to-card-ui:is(.dark *){
   background-image: linear-gradient(to bottom, #0D131B 51%, #0D131B 100%);
 }
 
 .dark\:bg-gradient-to-l:is(.dark *){
   background-image: linear-gradient(to right, #24386B, #2F56AC);
-}
-
-.dark\:bg-gradient-to-b:is(.dark *){
-  background-image: linear-gradient(to bottom, #BFEDF6 51%, #FFFFFF 100%);
-}
-
-.dark\:bg-gradient-dark-how:is(.dark *){
-  background-image: radial-gradient(circle at center, #151B27 0%, #142639 100%);
 }
 
 .dark\:text-\[\#1F1645\]:is(.dark *){
