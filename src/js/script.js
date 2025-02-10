@@ -700,12 +700,12 @@ function filterCountries(region) {
 }
 
 
-function toggleDropdown() {
-  document.getElementById('languageDropdown').classList.toggle('hidden');
+function toggleLangDropdown() {
+  document.getElementById('langDropdown').classList.toggle('hidden');
 }
 
-function selectLanguage(language, flagUrl) {
-  const selectedLanguage = document.getElementById('selectedLanguage');
-  selectedLanguage.innerHTML = `<img src="${flagUrl}" alt="${language}" class="w-4 h-3"> ${language}`;
-  toggleDropdown(); // Close the dropdown after selection
+function selectLang(language, flagUrl) {
+  const selectedLang = document.getElementById('selectedLang');
+  selectedLang.innerHTML = `<img src="${flagUrl}" alt="${language}" class="w-4 h-3"> ${language}`;
+  document.getElementById('langDropdown').classList.add('hidden'); // Close the dropdown after selection
 }
