@@ -3512,6 +3512,10 @@ html,
     display: flex;
   }
 
+  .xl\:hidden{
+    display: none;
+  }
+
   .xl\:w-2\/5{
     width: 40%;
   }
