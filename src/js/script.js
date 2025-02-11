@@ -273,23 +273,28 @@ const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
+  // autoplay:false,
+  autoplay: {
+    delay: 2500, 
+    disableOnInteraction: false, 
+  },
   navigation: {
-      nextEl: '.swiper-button-next', 
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-      640: {
-          slidesPerView: 1,
-      },
-      768: {
-          slidesPerView: 2,
-      },
-      1024: {
-          slidesPerView: 3,
-      },
-      1280: {
-          slidesPerView: 4,
-      },
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    1024: {
+    slidesPerView: 1,
+    },
+    1280: {
+    slidesPerView: 1,
+    },
   },
 });
 
