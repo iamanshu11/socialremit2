@@ -52,28 +52,160 @@
 
             <div class="hidden  lg:flex items-center space-x-4">
                 <nav class="flex items-center gap-4">
-                    <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
-                        onmouseout="this.children[1].style.display = 'none';">
-                        <button class="flex items-center dark:text-white text-secondary hover:text-primary">
-                            Send Money
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                    <li
+                        class="p-4 relative flex items-center space-x-1"
+                        x-data="{ open: false }"
+                        @mouseenter="open = true"
+                        @mouseleave="open = false"                            
+                    >
+                        <a
+                            class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300"
+                            href="#0"
+                            :aria-expanded="open"
+                        ><span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>Send Money</a>
+                        <button
+                            class="shrink-0 p-1"
+                            :aria-expanded="open"
+                            @click.prevent="open = !open"
+                        >
+                            <span class="sr-only">Show submenu for "Send money"</span>
+                            <svg class="w-3 h-3 fill-slate-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                                <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
                             </svg>
                         </button>
+                        <!-- 2nd level menu -->
+                        <ul
+                            class="origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-card-light dark:bg-gradient-dark-how p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
+                            x-show="open"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-200"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            @focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)"
+                        >
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
 
-                        <div class="dropdown-menu absolute hidden bg-white shadow-lg mt-1 rounded-md w-48">
-                            <a href="coming-soon.html"
-                                class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 1</a>
-                            <a href="coming-soon.html"
-                                class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu 2</a>
-                        </div>
-                    </div>
-                    <a href="track-your-transfer.html"
-                        class="dark:text-white text-secondary hover:text-primary">Track
-                        Your Transfer</a>
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                          
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gh.png" alt="Ghana Flag" class="w-4 h-4 object-cover"> <!-- Ghana flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Ghana</span>
+                                    </div>
+                                    
+                                </a>
+                                
+                                
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
 
-                    <a href="#" class=" dark:text-white hover:text-primary">Help center</a>
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/ng.png" alt="Nigeria Flag" class="w-4 h-4 object-cover"> <!-- Nigeria flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Nigeria</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/in.png" alt="India Flag" class="w-4 h-4 object-cover"> <!-- India flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">India</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/au.png" alt="Australia Flag" class="w-4 h-4 object-cover"> <!-- Australia flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Australia</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="#" class="group relative px-3 py-2 text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300"><span class="relative z-10">Track Transfer</span><span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
+
+                    <a href="#" class="group relative px-3 py-2 text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300"><span class="relative z-10">Help center</span><span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a>
 
                     <div class="relative " id="customLangSelector">
                         <div class="flex items-center justify-between border-b-2 bg-[#00B6DE]/5 dark:text-white rounded-lg px-4 py-2.5 backdrop-blur-xl border border-[#00B6DE]/10 text-[#1E0B4B] transition-all" onclick="toggleLangDropdown()">
@@ -84,19 +216,17 @@
                                 <path d="M6 9l6 6 6-6"></path>
                             </svg>
                         </div>
-                        <div id="langDropdown" class="absolute hidden w-full bg-white z-10">
-                            <div onclick="selectLang('English', 'https://flagcdn.com/16x12/us.png')" class="flex items-center gap-3 px-2 py-2 hover:bg-gray-300">
+                        <div id="langDropdown" class="absolute hidden w-full bg-gradient-to-card-light dark:bg-gradient-dark-how z-10">
+                            <div onclick="selectLang('English', 'https://flagcdn.com/16x12/us.png')" class="flex items-center gap-3 px-2 py-2 dark:text-white hover:bg-primary">
                                 <img src="https://flagcdn.com/16x12/us.png" alt="English" class="w-4 h-3"> English
                             </div>
-                            <div onclick="selectLang('Español', 'https://flagcdn.com/16x12/es.png')" class="flex items-center gap-3 px-2 py-2 hover:bg-gray-300">
+                            <div onclick="selectLang('Español', 'https://flagcdn.com/16x12/es.png')" class="flex items-center gap-3 px-2 py-2 dark:text-white hover:bg-primary">
                                 <img src="https://flagcdn.com/16x12/es.png" alt="Español" class="w-4 h-3"> Español
                             </div>
                             <!-- Add other languages with their flags -->
                         </div>
                     </div>
                     
-                    
-
                 </nav>
             </div>
 
@@ -187,25 +317,161 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white dark:bg-[#010C23] shadow-md hidden z-40">
             <div class="flex flex-col items-center space-y-4 py-6">
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
-                    onmouseout="this.children[1].style.display = 'none';">
-                    <button class="flex items-center z-10 dark:text-white text-secondary hover:text-gray-900">
-                        Send Money
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu absolute hidden z-9 bg-white shadow-lg mt-1 rounded-md w-48">
-                        <a href="coming-soon.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 1</a>
-                        <a href="coming-soon.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Submenu 2</a>
-                    </div>
-                </div>
+                <li
+                        class=" relative flex items-center space-x-1"
+                        x-data="{ open: false }"
+                        @mouseenter="open = true"
+                        @mouseleave="open = false"                            
+                    >
+                        <a
+                            class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300"
+                            href="#0"
+                            :aria-expanded="open"
+                        ><span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>Send Money</a>
+                        <button
+                            class="shrink-0 p-1"
+                            :aria-expanded="open"
+                            @click.prevent="open = !open"
+                        >
+                            <span class="sr-only">Show submenu for "Send money"</span>
+                            <svg class="w-3 h-3 fill-slate-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                                <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+                            </svg>
+                        </button>
+                        <!-- 2nd level menu -->
+                        <ul
+                            class="origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-card-light dark:bg-gradient-dark-how p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
+                            x-show="open"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 translate-y-0"
+                            x-transition:leave="transition ease-out duration-200"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            x-cloak
+                            @focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)"
+                        >
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                          
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gh.png" alt="Ghana Flag" class="w-4 h-4 object-cover"> <!-- Ghana flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Ghana</span>
+                                    </div>
+                                    
+                                </a>
+                                
+                                
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/ng.png" alt="Nigeria Flag" class="w-4 h-4 object-cover"> <!-- Nigeria flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Nigeria</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/in.png" alt="India Flag" class="w-4 h-4 object-cover"> <!-- India flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">India</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="group text-[#1E0B4B] dark:text-white text-base font-medium hover:text-[#00B6DE] transition-all duration-300 flex items-center p-2 gap-6" href="#">
+
+                                    <!-- UK Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/gb.png" alt="UK Flag" class="w-4 h-4 object-cover"> <!-- UK flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">UK</span>
+                                    </div>
+                                
+                                    <!-- SVG Icon in the Middle -->
+                                    <div class=" rounded h-7 w-7 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                                          </svg>
+                                    </div>
+                                
+                                    <!-- Ghana Flag and Text Closer Together -->
+                                    <div class="flex items-center">
+                                        <div class="bg-white border border-slate-200 rounded shadow-sm h-7 w-7 flex items-center justify-center mr-1">
+                                            <img src="https://flagcdn.com/h40/au.png" alt="Australia Flag" class="w-4 h-4 object-cover"> <!-- Australia flag -->
+                                        </div>
+                                        <span class="whitespace-nowrap">Australia</span>
+                                    </div>
+                                    
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 <a href="track-your-transfer.html" class=" dark:text-white text-secondary  hover:text-gray-900">Track
                     Your Transfer</a>
                 <a href="#" class=" dark:text-white text-secondary hover:text-gray-900">Help Center</a>
-                <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
+                <!-- <div class="relative dropdown" onmouseover="this.children[1].style.display = 'block';"
                     onmouseout="this.children[1].style.display = 'none';">
                     <button class="flex items-center z-10 dark:text-white text-secondary hover:text-primary">
                         English
@@ -220,7 +486,7 @@
                         <a href="coming-soon.html" class="block px-4 py-2 text-sm text-black hover:text-primary">Submenu
                             2</a>
                     </div>
-                </div>
+                </div> -->
 
                 <a href="sign-up.html"
                     class="bg-gradient-to-r  dark:bg-gradient-to-l text-white px-4 py-3 rounded-[15px] flex gap-4"><span
@@ -248,45 +514,48 @@
                 <div class="lg:w-[50%]  mb-12 lg:mb-0 " data-aos="fade-left" data-aos-duration="1000">
                     <div class="text-left space-y-4 lg:w-full">
                         <div
-                            class="inline-flex items-center bg-white  dark:bg-gradient-to-l gap-2  backdrop-blur-xl rounded-full px-4 md:px-5 py-2 md:py-2.5 border border-white/10">
+                            class="inline-flex items-center bg-white  dark:bg-[#26363F] gap-2  backdrop-blur-xl rounded-full px-4 md:px-5 py-2 md:py-2.5 border border-white/10">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ef4444"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="lucide lucide-heart w-4 h-4 text-red-500">
                                 <path
                                     d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
                                 </path>
-                            </svg><span class="text-xs md:text-sm font-medium text-black dark:text-white">For Migrants, By Migrants – Join the
-                                Movement</span></div>
-                                <div class="relative">
-                                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#1E0B4B] dark:text-white">
-                                        <div class="relative inline-block"><span class="relative z-10">Making every</span>
-                                            <div class="absolute -right-8 -top-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" class="lucide lucide-star w-8 h-8 text-[#00B6DE] animate-pulse">
-                                                    <polygon
-                                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                    </polygon>
-                                                </svg></div>
-                                        </div>
-                                        <div class="relative mt-2 md:mt-4"><span class="block">transfer</span></div>
-                                        <div class="relative mt-2 md:mt-4">
-                                            <div class="relative inline-block group"><span
-                                                    class="relative z-20 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent transform transition-transform duration-500 hover:scale-110">count
-                                                    more</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </h2>
-                                    <div
-                                        class="absolute -right-4 top-0 w-20 h-20 bg-gradient-to-br from-[#00B6DE]/10 to-[#0066CC]/10 rounded-full blur-2xl">
-                                    </div>
-                                    <div
-                                        class="absolute -left-4 bottom-0 w-20 h-20 bg-gradient-to-br from-[#0066CC]/10 to-[#00B6DE]/10 rounded-full blur-2xl">
+                            </svg><span class="text-xs md:text-sm font-medium text-black dark:text-white">For Migrants, By Migrants –
+                                Join the
+                                Movement</span>
+                        </div>
+                        <div class="relative">
+                            <h2 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#1E0B4B] dark:text-white">
+                                <div class="relative inline-block"><span class="relative z-10">Making every</span>
+                                    <div class="absolute -right-8 -top-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-star w-8 h-8 text-[#00B6DE] animate-pulse">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg></div>
+                                </div>
+                                <div class="relative mt-2 md:mt-4"><span class="block">transfer</span></div>
+                                <div class="relative mt-2 md:mt-4">
+                                    <div class="relative inline-block group"><span
+                                            class="relative z-20 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent transform transition-transform duration-500 hover:scale-110">count
+                                            more</span>
+                
                                     </div>
                                 </div>
-                                <h4 class="text-xl lg:text-2xl font-medium  text-secondary dark:text-white">Your transfers do
-                                    more than move money. They build schools, support communities, and create lasting change.
-                                </h4>
+                            </h2>
+                            <div
+                                class="absolute -right-4 top-0 w-20 h-20 bg-gradient-to-br from-[#00B6DE]/10 to-[#0066CC]/10 rounded-full blur-2xl">
+                            </div>
+                            <div
+                                class="absolute -left-4 bottom-0 w-20 h-20 bg-gradient-to-br from-[#0066CC]/10 to-[#00B6DE]/10 rounded-full blur-2xl">
+                            </div>
+                        </div>
+                        <h4 class="text-xl lg:text-2xl font-medium  text-secondary dark:text-white">Your transfers do
+                            more than move money. They build schools, support communities, and create lasting change.
+                        </h4>
 
                         <div class="hidden xl:block">
                             <!-- <div
@@ -622,13 +891,13 @@
 
                                             <div class=" relative mt-2">
                                                 <label for="amount"
-                                                    class="block text-md font-bold text-black dark:text-white px-2">You
+                                                    class="block text-md font-bold text-gray-500 dark:text-white px-2">You
                                                     Send</label>
-                                                <div class="flex  gap-2   mt-2 relative">
+                                                <div class="flex  gap-2 mt-2   dark:border-gray-400 rounded-[10px] p-1 relative border-[#00B6DE]/20 border-2 focus:ring-2 focus:ring-[#00B6DE]/30 focus:border-[#00B6DE] transition-all text-xl md:text-2xl font-bold tracking-tight placeholder:text-gray-400 shadow-inner">
                                                     <input type="text" id="amount" placeholder=" $ 2500"
-                                                        class="w-full text-[18px] bg-transparent  px-3 py-3  text-gray-800 dark:text-white focus:outline-none border border-gray-400 rounded-[10px] placeholder-[#000] dark:placeholder-[#fff] " />
+                                                        class="w-full text-[18px] bg-transparent  px-3 py-3  text-gray-800 dark:text-white focus:outline-none  placeholder:text-gray-400 dark:placeholder-[#fff] " />
                                                     <button type="button" id="currency-button"
-                                                        class="inline-flex items-center bg-[#ECECEC] dark:bg-transparent px-3 py-3 border border-gray-400 rounded-[10px]  focus:outline-none relative w-full max-w-max"
+                                                        class="inline-flex items-center bg-transparent dark:bg-transparent px-3 py-3 dark:border-gray-400 rounded-[10px]  focus:outline-none relative w-full max-w-max border-[#00B6DE]/20 border-2 focus:ring-2 focus:ring-[#00B6DE]/30 focus:border-[#00B6DE] transition-all text-xl md:text-2xl font-bold tracking-tight  shadow-inner"
                                                         onclick="toggleDropdown('currency-dropdown')">
                                                         <img src="../images/money-flag/australia.png" alt="GBP Flag"
                                                             class="h-8 mr-2" id="selected-flag" />
@@ -646,69 +915,69 @@
 
                                                 <!-- Currency Dropdown -->
                                                 <div id="currency-dropdown"
-                                                    class="hidden absolute top-full left-0 w-full border border-gray-300 bg-secondary rounded-md shadow-lg z-50 max-h-80 overflow-y-auto">
+                                                    class="hidden absolute top-full left-0 w-full border border-gray-300 bg-gradient-to-card-light dark:bg-gradient-dark-how rounded-md shadow-lg z-50 max-h-80 overflow-y-auto">
                                                     <div class="p-2">
                                                         <input type="text" id="currency-search"
                                                             placeholder="Search currency..."
-                                                            class="w-full px-3 py-2 border text-white bg-transparent rounded-md focus:outline-none"
+                                                            class="w-full px-3 py-2 border text-black dark:text-white bg-transparent rounded-md focus:outline-none"
                                                             oninput="filterDropdown('currency-dropdown', 'currency-search')" />
                                                     </div>
                                                     <ul class="divide-y divide-gray-200">
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/australia.png', 'AUD')">
                                                             <img src="../images/money-flag/australia.png" alt="AUD Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>AUD - Australian Dollar</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/bangladesh.png', 'BDT')">
                                                             <img src="../images/money-flag/bangladesh.png"
                                                                 alt="BDT Flag" class="h-8 mr-2" />
                                                             <span>BDT - Bangladeshi Taka</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/india.png', 'INR')">
                                                             <img src="../images/money-flag/india.png" alt="INR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>INR - Indian Rupee</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/pakistan.png', 'PKR')">
                                                             <img src="../images/money-flag/pakistan.png" alt="PAK Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>PKR - Pakistani Rupee </span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/nepal.png', 'NPR')">
                                                             <img src="../images/money-flag/nepal.png" alt="NGN Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>NPR - Nepalese Rupee</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/sri-lanka.png', 'LKR')">
                                                             <img src="../images/money-flag/sri-lanka.png" alt="LKR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>LKR - Sri Lankan Rupee</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/malaysia.png', 'MYR')">
                                                             <img src="../images/money-flag/malaysia.png" alt="MYR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>MYR - Malaysian Ringgit</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/phillipine.png', 'PHP')">
                                                             <img src="../images/money-flag/phillipine.png"
                                                                 alt="PHP Flag" class="h-8 mr-2" />
                                                             <span>PHP - Philippine Peso</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/viatnam.png', 'VND')">
                                                             <img src="../images/money-flag/viatnam.png" alt="VND Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>VND - Vietnamese Dong</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectCurrency('../images/money-flag/fiji.png', 'FJD')">
                                                             <img src="../images/money-flag/fiji.png" alt="FJD Flag"
                                                                 class="h-8 mr-2" />
@@ -731,14 +1000,13 @@
 
                                             <div class="mt-4">
                                                 <label for="recipient-amount"
-                                                    class="block text-md font-bold  text-black dark:text-white px-2">How
+                                                    class="block text-md font-bold  text-gray-500 dark:text-white px-2">How
                                                     to Receive</label>
                                                 <select id="bank" name="bank"
-                                                    class="w-full mt-3 px-4 py-3 bg-transparent border text-black dark:text-white border-gray-400 rounded-lg focus:outline-none">
+                                                    class="w-full mt-3 px-4 py-3 bg-transparent  text-black dark:text-white dark:border-gray-400 rounded-[10px] p-1 relative border-[#00B6DE]/20 border-2 focus:ring-2 focus:ring-[#00B6DE]/30 focus:border-[#00B6DE] focus:outline-none transition-all  font-bold tracking-tight placeholder:text-gray-400 shadow-inner">
                                                     <option>Please select</option>
                                                     <option value="Mobile Money - Instant (£2.99)" selected>Mobile Money
-                                                        - Instant
-                                                        (£2.99)
+                                                        <span>Instant</span>
                                                     </option>
                                                     <option value="Account Transfer">Account Transfer</option>
                                                     <option value="Paypal">Paypal</option>
@@ -751,16 +1019,16 @@
                                             <div class="mt-3  relative ">
                                                 <div class="flex items-center justify-between">
                                                     <label for="recipient-amount"
-                                                        class="block text-md font-bold  text-black dark:text-white px-2">They
+                                                        class="block text-md font-bold  text-gray-500 dark:text-white px-2">They
                                                         Receive</label>
                                                     <label for="recipient-amount"
-                                                        class="block text-md font-normal  text-[#02D3FF] dark:text-white px-2">(Guaranteed)</label>
+                                                        class="block text-sm font-normal  text-[#02D3FF] dark:text-white px-2">(Guaranteed)</label>
                                                 </div>
-                                                <div class="flex gap-2  mt-3 relative ">
+                                                <div class="flex gap-2  mt-3   dark:border-gray-400 rounded-[10px] p-1 relative border-[#00B6DE]/20 border-2 focus:ring-2 focus:ring-[#00B6DE]/30 focus:border-[#00B6DE] transition-all text-xl md:text-2xl font-bold tracking-tight placeholder:text-gray-400 shadow-inner">
                                                     <input type="" id="recipient-amount" placeholder=" ₹ 2330.88"
-                                                        class="w-full text-[18px] px-3 py-3 bg-transparent text-gray-800 dark:text-white focus:outline-none border border-gray-400 rounded-[10px] placeholder-[#000] dark:placeholder-[#fff]" />
+                                                        class="w-full text-[18px] px-3 py-3 bg-transparent text-gray-800 dark:text-white focus:outline-none placeholder-text-gray-400 dark:placeholder-[#fff]" />
                                                     <button type="button" id="recipient-currency-button"
-                                                        class="inline-flex items-center bg-[#ECECEC] dark:bg-transparent px-3 py-3 border border-gray-400 rounded-[10px] focus:outline-none relative w-full max-w-max"
+                                                        class="inline-flex items-center bg-transparent dark:bg-transparent px-3 py-3    focus:outline-none w-full max-w-max dark:border-gray-400 rounded-[10px] p-1 relative border-[#00B6DE]/20 border-2 focus:ring-2 focus:ring-[#00B6DE]/30 focus:border-[#00B6DE] transition-all text-xl md:text-2xl font-bold tracking-tight placeholder:text-gray-400 shadow-inner"
                                                         onclick="toggleDropdown('recipient-currency-dropdown')">
                                                         <img src="../images/money-flag/india.png" alt="NGN Flag"
                                                             class="h-8 mr-2" id="recipient-flag" />
@@ -778,69 +1046,69 @@
 
                                                 <!-- Recipient Currency Dropdown -->
                                                 <div id="recipient-currency-dropdown"
-                                                    class="hidden absolute top-full left-0 w-full border border-gray-300 bg-secondary rounded-md shadow-lg z-50 max-h-80 overflow-y-auto">
+                                                    class="hidden absolute top-full left-0 w-full border border-gray-300 bg-gradient-to-card-light dark:bg-gradient-dark-how rounded-md shadow-lg z-50 max-h-80 overflow-y-auto">
                                                     <div class="p-2">
                                                         <input type="text" id="recipient-currency-search"
                                                             placeholder="Search currency..."
-                                                            class="w-full bg-transparent text-white px-3 py-2 border rounded-md focus:outline-none"
+                                                            class="w-full bg-transparent text-black dark:text-white  px-3 py-2 border rounded-md focus:outline-none"
                                                             oninput="filterDropdown('recipient-currency-dropdown', 'recipient-currency-search')" />
                                                     </div>
                                                     <ul class="divide-y divide-gray-200">
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/australia.png', 'AUD')">
                                                             <img src="../images/money-flag/australia.png" alt="AUD Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>AUD - Australian Dollar</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/sri-lanka.png', 'LKR')">
                                                             <img src="../images/money-flag/sri-lanka.png" alt="NGN Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>LKR - Sri Lankan Rupee</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/bangladesh.png', 'BDT')">
                                                             <img src="../images/money-flag/bangladesh.png"
                                                                 alt="BDT Flag" class="h-8 mr-2" />
                                                             <span>BDT - Bangladeshi Taka</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/india.png', 'INR')">
                                                             <img src="../images/money-flag/india.png" alt="INR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>INR - Indian Rupee</span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/pakistan.png', 'PKR')">
                                                             <img src="../images/money-flag/pakistan.png" alt="PKR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>PKR - Pakistani Rupee </span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/nepal.png', 'NPR')">
                                                             <img src="../images/money-flag/nepal.png" alt="NPR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>NPR - Nepalese Rupee </span>
-                                                        </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        </li> 
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/malaysia.png', 'MYR')">
                                                             <img src="../images/money-flag/malaysia.png" alt="MYR Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>MYR - Malaysian Ringgit </span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/phillipine.png', 'PHP')">
                                                             <img src="../images/money-flag/phillipine.png"
                                                                 alt="PHP Flag" class="h-8 mr-2" />
                                                             <span>PHP - Philippine Peso </span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/viatnam.png', 'VND')">
                                                             <img src="../images/money-flag/viatnam.png" alt="VND Flag"
                                                                 class="h-8 mr-2" />
                                                             <span>VND - Vietnamese Dong </span>
                                                         </li>
-                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black  cursor-pointer"
+                                                        <li class="p-2 flex items-center hover:bg-primary hover:text-black text-black dark:text-white  cursor-pointer"
                                                             onclick="selectRecipientCurrency('../images/money-flag/fiji.png', 'FJD')">
                                                             <img src="../images/money-flag/fiji.png" alt="FJD Flag"
                                                                 class="h-8 mr-2" />
@@ -1064,7 +1332,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="text-center mb-16 md:mb-20">
                     <div
-                        class="inline-flex items-center gap-2 mb-6 bg-white backdrop-blur-xl rounded-full px-6 py-3 border border-[#00B6DE]/10 shadow-sm hover:shadow-md  duration-300">
+                        class="relative inline-flex items-center gap-2 mb-5 bg-white dark:bg-[#0A1628]/80  rounded-full px-6 py-3 border border-[#00B6DE]/20 shadow-[0_0_15px_rgba(0,182,222,0.3)]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-star w-5 h-5 text-[#00B6DE]">
@@ -1072,7 +1340,7 @@
                                 points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
                             </polygon>
                         </svg>
-                        <span class="text-lg font-bold text-[#1E0B4B]">SIMPLE STEPS</span><svg
+                        <span class="text-lg font-bold text-black dark:text-white">SIMPLE STEPS</span><svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-star w-5 h-5 text-[#0066CC]">
@@ -1081,8 +1349,8 @@
                             </polygon>
                         </svg>
                     </div>
-                    <h2
-                        class="text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight dark:text-white text-[#1E0B4B]">
+            
+                    <h2 class="text-5xl md:text-6xl lg:text-7xl font-black mb-4 tracking-tight dark:text-white text-[#1E0B4B]">
                         How it <span class="relative inline-block"><span
                                 class="relative z-10 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent">works</span>
                             <div
@@ -1299,7 +1567,7 @@
                             <circle cx="12" cy="12" r="10"></circle>
                         </svg><span class="text-sm font-medium text-black dark:text-white">GLOBAL COVERAGE</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-black dark:text-white"><span class="block md:inline">Send
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-[#1E0B4B] dark:text-white"><span class="block md:inline">Send
                             money</span><span class="relative inline-block md:ml-4"><span
                                 class="relative z-10 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent">worldwide</span>
                             <div class="absolute -bottom-2 left-0 w-full h-2 bg-[#00B6DE]/20 rounded-full"></div>
@@ -1490,7 +1758,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="text-center mb-12 md:mb-16">
                     <div
-                        class="inline-flex items-center justify-center gap-2 mb-4 text-black bg-white dark:bg-[#1A242D]  border-primary backdrop-blur-xl rounded-xl px-4 py-2 md:px-6 md:py-3 shadow-lg border">
+                        class="inline-flex items-center gap-2 mb-6 bg-white dark:bg-transparent  rounded-full px-4 py-2 border border-white/10">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-sparkles w-5 h-5 md:w-6 md:h-6 text-[#00B6DE]">
@@ -1506,12 +1774,12 @@
                             OPTIONS</span>
                     </div>
                     <h2
-                        class="text-3xl md:text-5xl lg:text-6xl font-black mb-4 tracking-tight text-black dark:text-white">
+                        class="text-3xl md:text-5xl lg:text-6xl font-black mb-4 tracking-tight text-[#1E0B4B] dark:text-white">
                         How to <span class="relative inline-block"><span
                                 class="relative z-10 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent">receive
                                 money</span></span>
                     </h2>
-                    <p class="text-base md:text-lg max-w-2xl mx-auto font-medium text-white/70">Multiple secure ways to
+                    <p class="text-base md:text-lg max-w-2xl mx-auto font-medium text-black dark:text-white">Multiple secure ways to
                         receive your transfers</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -1800,7 +2068,7 @@
                 </div>
                 <div class="mt-8 md:mt-12 text-center">
                     <div
-                        class="inline-flex items-center gap-2 bg-white/5 text:black  dark:text-white border-white/10 font-medium backdrop-blur-xl py-2 px-4 md:py-3 md:px-6 rounded-xl shadow-lg border text-sm md:text-base">
+                        class="inline-flex items-center gap-2 bg-white dark:bg-white/5 text:black  dark:text-white border-white/10 font-medium backdrop-blur-xl py-2 px-4 md:py-3 md:px-6 rounded-xl shadow-lg border text-sm md:text-base">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-shield w-4 h-4 md:w-5 md:h-5 text-[#00B6DE]">
@@ -1840,11 +2108,11 @@
                             </path>
                         </svg>
                     </div>
-                    <h2 class="text-5xl md:text-6xl lg:text-7xl font-black mb-4 text-black dark:text-white">Why Families <span
+                    <h2 class="text-5xl md:text-6xl lg:text-7xl font-black mb-4 text-[#1E0B4B] dark:text-white">Why Families <span
                             class="bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent">choose
                             us</span>
                     </h2>
-                    <p class="text-lg md:text-xl max-w-2xl mx-auto text-white/70">Making Every Transfer Count Towards
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto text-black dark:text-white">Making Every Transfer Count Towards
                         Positive
                         Change</p>
                 </div>
@@ -2006,7 +2274,7 @@
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg></span></button>
-                    <p class="mt-4 text-sm text-white/60">Join Our Community of Change Makers</p>
+                    <p class="mt-4 text-sm text-black dark:text-white">Join Our Community of Change Makers</p>
                 </div>
             </div>
         </section>
@@ -2045,7 +2313,7 @@
                         </div>
                     </div>
                     <div class="mt-8 space-y-4">
-                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black text-secondary dark:text-white">Your security is our <span
+                        <h2 class="text-5xl md:text-6xl lg:text-7xl font-black text-[#1E0B4B] dark:text-white">Your security is our <span
                                 class="bg-gradient-to-r from-[#00B6DE] to-[#0066CC] bg-clip-text text-transparent">priority</span>
                         </h2>
                         <p class="text-xl max-w-2xl mx-auto text-black dark:text-white">Enterprise-grade security protecting your
@@ -2348,7 +2616,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col items-center border-t border-[#00B6DE]/10 pt-8 md:pt-12">
-                    <h4 class="text-xl font-bold mb-6 text-white">Security Certifications</h4>
+                    <h4 class="text-xl font-bold mb-6 text-black dark:text-white">Security Certifications</h4>
                     <div class="flex flex-wrap justify-center gap-3">
                         <div
                             class="group flex items-center gap-2 bg-white dark:bg-[#0A1628]/80  rounded-full px-4 py-2  duration-300 border border-[#00B6DE]/20 hover:border-[#00B6DE]/30 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(0,182,222,0.2)]">
@@ -2428,7 +2696,7 @@
                             </svg>
                             <span class="text-lg font-bold text-black dark:text-white">4.9/5 on App Store &amp; Play Store</span>
                         </div>
-                        <h2 class="text-6xl font-black tracking-tight text-black dark:text-white">Get the Social Remit app</h2>
+                        <h2 class="text-6xl font-black tracking-tight text-[#1E0B4B] dark:text-white">Get the Social Remit app</h2>
                         <p class="text-xl text-black dark:text-white max-w-xl">Send money on the go with our secure and easy-to-use
                             mobile app. Available for iOS and Android devices.</p>
                         <div class="space-y-6">
