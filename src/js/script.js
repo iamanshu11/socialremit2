@@ -570,20 +570,48 @@ function showFormfile(formTypefile) {
 }
 
 
+function updateThemeDisplay(isDarkMode) {
+  const htmlElement = document.documentElement;
+  htmlElement.classList.toggle('dark', isDarkMode);
+  const lightModeButton = document.getElementById('light-mode');
+  const darkModeButton = document.getElementById('dark-mode');
+
+  if (isDarkMode) {
+      darkModeButton.style.backgroundColor = '#00A1CC'; // Dark mode active color
+      lightModeButton.style.backgroundColor = 'transparent'; // Light mode inactive color
+  } else {
+      lightModeButton.style.backgroundColor = '#00A1CC'; // Light mode active color
+      darkModeButton.style.backgroundColor = 'transparent'; // Dark mode inactive color
+  }
+}
+
+// Function to set the theme preference
+function setThemePreference(isDarkMode) {
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  updateThemeDisplay(isDarkMode);
+}
+
+// Initialize theme based on local storage or system preference
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.classList.add('dark');
+  const storedTheme = localStorage.getItem('theme');
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (storedTheme !== null) {
+      updateThemeDisplay(storedTheme === 'dark');
+  } else {
+      setThemePreference(prefersDarkMode);
   }
 });
 
-// Add event listener for system theme changes
+// Event listeners for theme change buttons
+document.getElementById('light-mode').addEventListener('click', () => setThemePreference(false));
+document.getElementById('dark-mode').addEventListener('click', () => setThemePreference(true));
+
+// Listener for system theme changes
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-  if (event.matches) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+  setThemePreference(event.matches);
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const lightModeButtonMobile = document.getElementById('light-mode-mobile');
