@@ -717,6 +717,10 @@ html,
   top: 100%;
 }
 
+.-left-20{
+  left: -5rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -838,6 +842,10 @@ html,
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
 }
 
 .block{
@@ -1041,6 +1049,14 @@ html,
   width: 1px;
 }
 
+.w-\[600px\]{
+  width: 600px;
+}
+
+.w-\[800px\]{
+  width: 800px;
+}
+
 .min-w-0{
   min-width: 0px;
 }
@@ -1126,6 +1142,10 @@ html,
   transform-origin: top right;
 }
 
+.origin-top{
+  transform-origin: top;
+}
+
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1148,6 +1168,11 @@ html,
 
 .translate-y-4{
   --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-4{
+  --tw-translate-y: -1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1251,6 +1276,10 @@ html,
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -1688,6 +1717,10 @@ html,
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-white\/10{
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .bg-opacity-0{
   --tw-bg-opacity: 0;
 }
@@ -2090,6 +2123,10 @@ html,
   line-height: 1rem;
 }
 
+.text-\[15px\]{
+  font-size: 15px;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -2220,6 +2257,35 @@ html,
 }
 
 .text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#1E0B4B\]\/30{
+  color: rgb(30 11 75 / 0.3);
+}
+
+.text-\[\#1E0B4B\]\/50{
+  color: rgb(30 11 75 / 0.5);
+}
+
+.text-white\/30{
+  color: rgb(255 255 255 / 0.3);
+}
+
+.text-white\/50{
+  color: rgb(255 255 255 / 0.5);
+}
+
+.text-white\/60{
+  color: rgb(255 255 255 / 0.6);
+}
+
+.text-white\/70{
+  color: rgb(255 255 255 / 0.7);
+}
+
+.text-\[\#fff\]{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2466,11 +2532,6 @@ html,
   background-color: rgb(217 234 250 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-blue-200:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-blue-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
@@ -2489,6 +2550,10 @@ html,
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(0 170 206 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-white\/5:hover{
+  background-color: rgb(255 255 255 / 0.05);
 }
 
 .hover\:bg-opacity-75:hover{
@@ -2848,6 +2913,15 @@ html,
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.dark\:bg-\[\#19202D\]:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 32 45 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-\[\#19202dc9\]:is(.dark *){
+  background-color: #19202dc9;
+}
+
 .dark\:bg-gradient-dark:is(.dark *){
   background-image: radial-gradient(circle at center, #18222F 0%, #10131C 100%);
 }
@@ -2901,6 +2975,21 @@ html,
   color: rgb(255 255 255 / 0.8);
 }
 
+.dark\:text-\[\#000\]:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-\[\#81848C\]:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(129 132 140 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-\[\#00B6DE\]:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(0 182 222 / var(--tw-text-opacity, 1));
+}
+
 .dark\:placeholder-\[\#fff\]:is(.dark *)::-moz-placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity, 1));
@@ -2919,6 +3008,10 @@ html,
 .dark\:hover\:bg-\[\#54CEEE\]:hover:is(.dark *){
   --tw-bg-opacity: 1;
   background-color: rgb(84 206 238 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:hover\:bg-white\/5:hover:is(.dark *){
+  background-color: rgb(255 255 255 / 0.05);
 }
 
 @media (min-width: 640px){

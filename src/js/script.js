@@ -608,7 +608,7 @@ document.getElementById('light-mode').addEventListener('click', () => setThemePr
 document.getElementById('dark-mode').addEventListener('click', () => setThemePreference(true));
 
 // Listener for system theme changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
   setThemePreference(event.matches);
 });
 
