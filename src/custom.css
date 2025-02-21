@@ -1,6 +1,4 @@
-
-body
-{
+body {
     font-family: 'Inter', sans-serif;
 }
 
@@ -10,9 +8,9 @@ body
 
 .dropdown:focus-within .dropdown-menu {
     display: block;
-  }
+}
 
-  .swiper-container-flipped {
+.swiper-container-flipped {
     transform: scaleX(-1);
 }
 
@@ -21,7 +19,8 @@ body
 }
 
 .tilt-parent {
-    perspective: 1000px; /* Apply to the parent container if needed */
+    perspective: 1000px;
+    /* Apply to the parent container if needed */
 }
 
 .transition-all {
@@ -34,78 +33,93 @@ body
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid #00A1CC; /* Match the detail box background color */
+    border-top: 10px solid #00A1CC;
+    /* Match the detail box background color */
     position: absolute;
-    bottom: 100%; /* Position the triangle above the detail box */
+    bottom: 100%;
+    /* Position the triangle above the detail box */
     left: 50%;
     transform: translateX(-50%);
 }
 
 .bg-black-custom {
-    background-color: #00A1CC !important; 
+    background-color: #00A1CC !important;
 }
 
-
 .earth {
-  width: 40%;
-  height: 80%;
-  position: absolute;
-  top: -4%;
-  bottom: 0;
-  left: 58%;
-  /* right: 0; */
-  margin: auto;
-  background-image: url(../images/banner-bg.png);
-  border-radius: 50%;
-  background-size: cover;
-  /* box-shadow: 0 0 20px 0px #f9f9f9 inset, 0 0 20px 2px #f9f9f9; */
-  animation: animateEarth 180s linear infinite;
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    top: -4%;
+    bottom: 0;
+    left: 58%;
+    /* right: 0; */
+    margin: auto;
+    background-image: url(../images/banner-bg.png);
+    border-radius: 50%;
+    background-size: cover;
+    /* box-shadow: 0 0 20px 0px #f9f9f9 inset, 0 0 20px 2px #f9f9f9; */
+    animation: animateEarth 180s linear infinite;
 }
 
 @keyframes animateEarth {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 1400px 0;
-  }
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1400px 0;
+    }
 }
 
-
 .diagonal-split-background {
-  background-image: -webkit-linear-gradient(-10deg, #fff 40%, #00ABDC 42%, #0578D0 86%);
+    background-image: -webkit-linear-gradient(-10deg, #fff 40%, #00ABDC 42%, #0578D0 86%);
 }
 
 select#bank option {
-  background-color: #f9f9f9; /* Light grey background */
-  color: black; /* Text color */
+    background-color: #f9f9f9;
+    /* Light grey background */
+    color: black;
+    /* Text color */
 }
 
 .hover-force:hover {
-  background-color: #9da0a1 !important; /* Light mode hover color */
+    background-color: #9da0a1 !important;
+    /* Light mode hover color */
 }
+
 .dark .hover-force:hover {
-  background-color: #424242 !important; /* Dark mode hover color */
+    background-color: #424242 !important;
+    /* Dark mode hover color */
 }
 
 @keyframes fade-in {
-  0% {
-      opacity: 0;
-      transform: scale(0.5);
-  }
-  100% {
-      opacity: 1;
-      transform: scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
+
 .animate-fade-in {
-  animation: fade-in 0.6s ease-out 1s forwards;
+    animation: fade-in 0.6s ease-out 1s forwards;
 }
+
+
+/* Custom CSS for slide-in animation */
+
 .slide-in {
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 }
+
 .slide-in.active {
-  transform: translateX(0);
+    transform: translateX(0);
 }

@@ -1,9 +1,9 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Set up a click listener for each dropdown button
     document.querySelectorAll('.dropdown-button').forEach(button => {
-        button.addEventListener('click', function (event) {
+        button.addEventListener('click', function(event) {
             const dropdownId = this.getAttribute('data-target');
             const dropdown = document.getElementById(dropdownId);
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handling nested dropdowns inside each dropdown-content
     document.querySelectorAll('.nested-dropdown-button').forEach(button => {
-        button.addEventListener('click', function (event) {
+        button.addEventListener('click', function(event) {
             // Prevent the click from affecting parent dropdowns
             event.stopPropagation();
 
@@ -58,46 +58,49 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// JavaScript to handle slide-in menus
 function toggleSlideMenu(menuId) {
+    const currentMenu = document.querySelector(".slide-in.active") || document.getElementById("main-menu");
+    const nextMenu = document.getElementById(menuId);
+
+    // Hide current menu and show next menu
+    currentMenu.classList.remove("active");
+    setTimeout(() => {
+        currentMenu.classList.add("hidden");
+        nextMenu.classList.remove("hidden");
+        nextMenu.classList.add("active");
+    }, 10); // Small delay to allow the transition to work
+}
+
+function goToMainMenu() {
+    const currentMenu = document.querySelector(".slide-in.active");
     const mainMenu = document.getElementById("main-menu");
-    const slideMenu = document.getElementById(menuId);
 
-    // Hide Main Menu and show Slide Menu
-    mainMenu.classList.add("hidden");
-    slideMenu.classList.remove("hidden");
-    slideMenu.classList.add("active");
-  }
-
-  function goBack() {
-    const mainMenu = document.getElementById("main-menu");
-    const activeSlideMenu = document.querySelector(".slide-in.active");
-
-    // Hide Slide Menu and show Main Menu
-    if (activeSlideMenu) {
-      activeSlideMenu.classList.remove("active");
-      setTimeout(() => {
-        activeSlideMenu.classList.add("hidden");
+    // Hide current menu and show main menu
+    currentMenu.classList.remove("active");
+    setTimeout(() => {
+        currentMenu.classList.add("hidden");
         mainMenu.classList.remove("hidden");
-      }, 300); // Match the transition duration
-    }
-  }
+        mainMenu.classList.add("active");
+    }, 10); // Small delay to allow the transition to work
+}
 
 
-( function( $ ) {
+(function($) {
 
-	"use strict";
+    "use strict";
 
-  $(".card").tilt({
-    maxTilt: 15,
-    perspective: 1400,
-    easing: "cubic-bezier(.03,.98,.52,.99)",
-    speed: 1200,
-    glare: true,
-    maxGlare: 0.2,
-    scale: 1.04
-  });
-  
-}( jQuery ) );
+    $(".card").tilt({
+        maxTilt: 15,
+        perspective: 1400,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+        speed: 1200,
+        glare: true,
+        maxGlare: 0.2,
+        scale: 1.04
+    });
+
+}(jQuery));
 
 
 function toggleDropdown() {
@@ -131,9 +134,3 @@ function selectNationality(countryName, flagUrl) {
     const dropdownList = document.getElementById('nationality-drop-list');
     dropdownList.classList.add('hidden');
 }
-
-
-
-
-
-
