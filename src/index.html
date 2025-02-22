@@ -207,7 +207,7 @@
 
                     <li class="p-4 relative flex items-center space-x-1" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                         <a class="group text-[#1E0B4B] dark:text-white text-[15px] font-medium hover:text-[#00B6DE]  duration-300" href="#0" :aria-expanded="open"><span
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>Products
+                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300  ease-out  origin-left"></span>Products
                         </a>
                         <button class="shrink-0 p-1" :aria-expanded="open" @click.prevent="open = !open">
                             <span class="sr-only">Show submenu for "Product"</span>
