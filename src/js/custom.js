@@ -1,61 +1,60 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Set up a click listener for each dropdown button
-    document.querySelectorAll('.dropdown-button').forEach(button => {
-        button.addEventListener('click', function(event) {
-            const dropdownId = this.getAttribute('data-target');
-            const dropdown = document.getElementById(dropdownId);
+// Matrix characters
+const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const charactersArray = characters.split("");
 
-            // Prevent the click from propagating, which can trigger outside click prematurely
-            event.stopPropagation();
+// Matrix configuration
+const fontSize = 16;
+const speed = 3;
 
-            // Toggle the current dropdown and close others
-            if (dropdown.classList.contains('hidden')) {
-                // Close all dropdowns first
-                closeAllDropdowns();
-                // Show the current dropdown
-                dropdown.classList.remove('hidden');
-            } else {
-                // If clicking the same button while open, close it
-                dropdown.classList.add('hidden');
-            }
+// Create the canvas and context
+const canvas = document.getElementById("matrix");
+const context = canvas.getContext("2d");
 
-            // Function to handle clicking outside, closing all dropdowns
-            function handleClickOutside(event) {
-                if (!dropdown.contains(event.target) && !button.contains(event.target)) {
-                    dropdown.classList.add('hidden');
-                    // Remove this listener once it's not needed
-                    document.removeEventListener('click', handleClickOutside);
-                }
-            }
+// Set the canvas dimensions
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-            // Add listener for clicks outside the dropdown
-            document.addEventListener('click', handleClickOutside);
-        });
-    });
+// Calculate the number of columns and rows
+const columns = Math.floor(canvas.width / fontSize);
+const rows = Math.floor(canvas.height / fontSize);
 
-    // Close all dropdowns function
-    function closeAllDropdowns() {
-        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-            dropdown.classList.add('hidden');
-        });
+// Initialize the columns
+const matrix = [];
+for (let i = 0; i < columns; i++) {
+    matrix[i] = 1;
+}
+
+// Matrix animation
+function drawMatrix() {
+    context.fillStyle = "rgba(0, 0, 0, 0.05)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = "#0F0";
+    context.font = fontSize + "px monospace";
+
+    for (let i = 0; i < matrix.length; i++) {
+        const text = charactersArray[Math.floor(Math.random() * charactersArray.length)];
+        context.fillText(text, i * fontSize, matrix[i] * fontSize);
+
+        if (matrix[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            matrix[i] = 0;
+        }
+
+        matrix[i]++;
     }
+}
 
-    // Handling nested dropdowns inside each dropdown-content
-    document.querySelectorAll('.nested-dropdown-button').forEach(button => {
-        button.addEventListener('click', function(event) {
-            // Prevent the click from affecting parent dropdowns
-            event.stopPropagation();
+// Render loop
+function animateMatrix() {
+    drawMatrix();
+    requestAnimationFrame(animateMatrix);
+}
 
-            const nestedDropdownId = this.getAttribute('data-target');
-            const nestedDropdown = document.getElementById(nestedDropdownId);
+// Start the animation
+animateMatrix();
 
-            // Toggle the visibility of the nested dropdown
-            nestedDropdown.classList.toggle('hidden');
-        });
-    });
-});
 
 
 // JavaScript to handle slide-in menus
