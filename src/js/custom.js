@@ -6,7 +6,7 @@ const charactersArray = characters.split("");
 
 // Matrix configuration
 const fontSize = 16;
-const speed = 3;
+const speed = 9;
 
 // Create the canvas and context
 const canvas = document.getElementById("matrix");

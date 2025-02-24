@@ -1062,7 +1062,7 @@
 
 
                 <a href="sign-up.html" class=" bg-primary dark:bg-black text-white px-2 py-3 rounded-[15px] flex gap-4"><span
-                        class="font-bold  ">Sign up</span>
+                        class="font-bold  ">Download App</span>
                 </a>
 
 
@@ -2087,51 +2087,33 @@
                                 </div>
                             </div> -->
 
-                            <div class="flex flex-wrap gap-4 mt-8"><button class="group relative px-8 py-4 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl  duration-500 transform hover:-translate-y-1"><span
-                                        class="relative z-10 flex items-center">Sign Up<svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-arrow-right w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform">
-                                            <path d="M5 12h14"></path>
-                                            <path d="m12 5 7 7-7 7"></path>
-                                        </svg></span>
-                                    <div
-                                        class="absolute inset-0 rounded-xl bg-gradient-to-r from-[#0066CC] to-[#00B6DE] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    </div>
-                                </button>
-                                <!-- <button
-                                    class="group relative flex items-center px-8 py-4 rounded-xl font-bold text-lg border-2 border-[#00B6DE] text-[#00B6DE] hover:bg-[#00B6DE]/5  duration-300"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-earth w-5 h-5 mr-2">
-                                        <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path>
-                                        <path
-                                            d="M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17">
-                                        </path>
-                                        <path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05">
-                                        </path>
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                    </svg><span>View Coverage</span>
-                                </button> -->
-                                <div class="inline-flex items-center gap-2 bg-white dark:bg-[#233340]  rounded-xl px-6 py-3 border border-white/10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code w-6 h-6 text-[#00B6DE]">
-                                        <rect width="5" height="5" x="3" y="3" rx="1"></rect>
-                                        <rect width="5" height="5" x="16" y="3" rx="1"></rect>
-                                        <rect width="5" height="5" x="3" y="16" rx="1"></rect>
-                                        <path d="M21 16h-3a2 2 0 0 0-2 2v3"></path>
-                                        <path d="M21 21v.01"></path>
-                                        <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
-                                        <path d="M3 12h.01"></path>
-                                        <path d="M12 3h.01"></path>
-                                        <path d="M12 16v.01"></path>
-                                        <path d="M16 12h1"></path>
-                                        <path d="M21 12v.01"></path>
-                                        <path d="M12 21v-1"></path>
-                                    </svg>
-                                    <span class="text-lg font-bold text-black dark:text-white">DOWNLOAD APP</span>
+                            <div class="group inline-flex mt-4 items-center gap-2 bg-white dark:bg-[#233340] rounded-xl px-6 py-3 border border-white/10 relative">
+                                <!-- QR Code Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code w-6 h-6 text-[#00B6DE]">
+                                    <rect width="5" height="5" x="3" y="3" rx="1"></rect>
+                                    <rect width="5" height="5" x="16" y="3" rx="1"></rect>
+                                    <rect width="5" height="5" x="3" y="16" rx="1"></rect>
+                                    <path d="M21 16h-3a2 2 0 0 0-2 2v3"></path>
+                                    <path d="M21 21v.01"></path>
+                                    <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
+                                    <path d="M3 12h.01"></path>
+                                    <path d="M12 3h.01"></path>
+                                    <path d="M12 16v.01"></path>
+                                    <path d="M16 12h1"></path>
+                                    <path d="M21 12v.01"></path>
+                                    <path d="M12 21v-1"></path>
+                                </svg>
+                            
+                                <!-- Text -->
+                                <span class="text-lg font-semibold text-black dark:text-white">Scan To Download</span>
+                            
+                                <!-- QR Code Image (Hidden by default) -->
+                                <div class="absolute hidden group-hover:block top-full mt-2 left-1/2 transform -translate-x-1/2  bg-white dark:bg-[#233340] p-2 rounded-lg shadow-lg border border-white/10">
+                                    <img src="../images/qr.png" alt="QR Code" class="w-full" />
                                 </div>
                             </div>
+
+                            
 
                         </div>
 
@@ -2633,7 +2615,7 @@
                                             </div>
 
                                             <a href="" class="w-full flex items-center justify-center gap-3 md:w-full bg-gradient-to-r    dark:text-white  text-white text-lg font-medium py-4 mt-6 rounded-[10px]  text-center">
-                                                Send Money Now
+                                                Claim Your Rate
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                                     class="w-4 h-4">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -2722,37 +2704,17 @@
                         </div>
                     </div> -->
 
-                    <div class="flex flex-wrap gap-4 mt-8"><button class="group relative w-full text-center px-8 py-4 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl  duration-500 transform hover:-translate-y-1"><span
-                                class="relative z-10 flex items-center justify-center">Start Sending Now<svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg></span>
-                            <div
-                                class="absolute inset-0 rounded-xl bg-gradient-to-r from-[#0066CC] to-[#00B6DE] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                        </button>
-                        <div class="inline-flex items-center gap-2 bg-white dark:bg-[#233340]  rounded-xl px-6 py-3 border border-white/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code w-6 h-6 text-[#00B6DE]">
-                                <rect width="5" height="5" x="3" y="3" rx="1"></rect>
-                                <rect width="5" height="5" x="16" y="3" rx="1"></rect>
-                                <rect width="5" height="5" x="3" y="16" rx="1"></rect>
-                                <path d="M21 16h-3a2 2 0 0 0-2 2v3"></path>
-                                <path d="M21 21v.01"></path>
-                                <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
-                                <path d="M3 12h.01"></path>
-                                <path d="M12 3h.01"></path>
-                                <path d="M12 16v.01"></path>
-                                <path d="M16 12h1"></path>
-                                <path d="M21 12v.01"></path>
-                                <path d="M12 21v-1"></path>
-                            </svg>
-                            <span class="text-lg font-bold text-black dark:text-white">DOWNLOAD APP</span>
-                        </div>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="../images/app-store.png" alt="Download on App Store" class="h-14"></a>
+                        <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="../images/google-play.png" alt="Get it on Google Play" class="h-14 object-contain"></a>
                     </div>
+                    <div class="inline-flex items-center gap-2 text-black dark:text-white mt-2 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-[#00B6DE]">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                            </path>
+                        </svg><span>Secure download from official app stores</span></div>
+
+                    
 
                 </div>
 
@@ -2971,7 +2933,7 @@
                 </div> -->
                 <div class="mt-16 md:mt-20 text-center"><button
                         class="group relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] text-white rounded-2xl font-bold text-xl shadow-md hover:shadow-lg  duration-300 hover:-translate-y-1"><span
-                            class="relative z-10 flex items-center">Start sending now<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            class="relative z-10 flex items-center">Download The App<svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round"
                                 class="lucide lucide-arrow-right w-7 h-7 ml-3 group-hover:translate-x-2 transition-transform">
@@ -3555,7 +3517,7 @@
                     </div>
                 </div>
                 <div class="mt-12 md:mt-16 text-center"><button class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#00B6DE] to-[#0066CC] text-white rounded-xl font-bold text-lg  duration-500 hover:-translate-y-1 hover:shadow-xl"><span
-                            class="relative z-10 flex items-center">Start Your Journey<svg
+                            class="relative z-10 flex items-center"> Download The App<svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -4225,9 +4187,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store" class="h-14"></a>
-                                <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-14 object-contain" style="max-width: 156px;"></a>
+                            <div class="flex flex-wrap gap-4 mt-2">
+                                <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="../images/app-store.png" alt="Download on App Store" class="h-14"></a>
+                                <a href="#" class="transform hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer"><img src="../images/google-play.png" alt="Get it on Google Play" class="h-14 object-contain"></a>
                             </div>
                             <div class="inline-flex items-center gap-2 text-black dark:text-white text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-[#00B6DE]">
                                     <path
