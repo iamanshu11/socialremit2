@@ -742,3 +742,19 @@ function selectLang(language, flagUrl) {
   selectedLang.innerHTML = `<img src="${flagUrl}" alt="${language}" class="w-4 h-3"> ${language}`;
   document.getElementById('langDropdown').classList.add('hidden'); // Close the dropdown after selection
 }
+
+
+// ========== Phone number hidden button ===================================
+
+function validatePhoneNumber() {
+  const input = document.getElementById('mobile-number');
+  const downloadButton = document.getElementById('download-button');
+  const phoneNumber = input.value.trim();
+
+  // Check if the input is exactly 10 digits
+  if (/^\d{10}$/.test(phoneNumber)) {
+    downloadButton.classList.remove('hidden'); // Show the button
+  } else {
+    downloadButton.classList.add('hidden'); // Hide the button
+  }
+}
