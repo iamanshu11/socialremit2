@@ -8,6 +8,10 @@ module.exports = {
         './src/track-your-transfer.html',
         './src/download-app.html',
         './src/enter-otp.html',
+        './src/about-us.html',
+        './src/career.html',
+        './src/blog.html',
+        
 
     ],
     theme: {

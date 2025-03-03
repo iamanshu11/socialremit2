@@ -154,3 +154,11 @@ select#bank option {
     transform: translateY(-1.5rem) scale(0.75);
     background-color: white;
 }
+
+.flex.items-center {
+    flex-wrap: nowrap; /* Prevents wrapping */
+    min-width: 0; /* Overcomes default flexbox behavior that prevents shrinking */
+}
+.flex.items-center > img {
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}

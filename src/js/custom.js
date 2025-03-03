@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 // Matrix characters
 const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const charactersArray = characters.split("");
@@ -133,3 +135,5 @@ function selectNationality(countryName, flagUrl) {
     const dropdownList = document.getElementById('nationality-drop-list');
     dropdownList.classList.add('hidden');
 }
+
+

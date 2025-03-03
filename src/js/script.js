@@ -701,7 +701,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
 document.getElementById('allRegions').addEventListener('click', () => filterCountries('All Regions'));
 document.getElementById('africa').addEventListener('click', () => filterCountries('Africa'));
 document.getElementById('asia').addEventListener('click', () => filterCountries('Asia'));
@@ -732,6 +731,34 @@ function filterCountries(region) {
     });
 }
 
+// document.getElementById('filterAllBlogs').addEventListener('click', () => filterBlogs('All Blogs'));
+// document.getElementById('filterTech').addEventListener('click', () => filterBlogs('Technology'));
+// document.getElementById('filterBusiness').addEventListener('click', () => filterBlogs('Business'));
+// document.getElementById('filterTravel').addEventListener('click', () => filterBlogs('Travel'));
+// document.getElementById('filterLifestyle').addEventListener('click', () => filterBlogs('Lifestyle'));
+// document.getElementById('filterNews').addEventListener('click', () => filterBlogs('News'));
+
+// function filterBlogs(category) {
+//     const posts = document.querySelectorAll('#blogGrid > div');
+//     posts.forEach(post => {
+//         if (category === 'All Blogs' || post.classList.contains(category.replace(/\s+/g, ''))) {
+//             post.style.display = 'flex'; 
+//         } else {
+//             post.style.display = 'none';
+//         }
+//     });
+
+//     const buttons = document.querySelectorAll('.category-button'); 
+//     buttons.forEach(button => {
+//         if (button.id.toLowerCase() === 'filter' + category.replace(/\s+/g, '').toLowerCase()) {
+//             button.className = 'category-button bg-blue-700 text-white py-2 px-4 rounded';
+//         } else {
+//             button.className = 'category-button bg-gray-200 text-gray-600 py-2 px-4 rounded hover:bg-blue-500 hover:text-white';
+//         }
+//     });
+// }
+
+
 
 function toggleLangDropdown() {
   document.getElementById('langDropdown').classList.toggle('hidden');
@@ -758,3 +785,6 @@ function validatePhoneNumber() {
     downloadButton.classList.add('hidden'); // Hide the button
   }
 }
+
+
+
