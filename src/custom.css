@@ -162,3 +162,28 @@ select#bank option {
 .flex.items-center > img {
     flex-shrink: 0; /* Prevents the icon from shrinking */
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.blog-post {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.blog-image {
+    grid-column: 1;
+}
+
+.blog-content {
+    grid-column: 2;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}

@@ -11,6 +11,8 @@ module.exports = {
         './src/about-us.html',
         './src/career.html',
         './src/blog.html',
+        './src/newsroom.html',
+        './src/our-operating.html',
         
 
     ],

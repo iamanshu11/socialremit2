@@ -1,4 +1,35 @@
 "use strict";
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    // Set initial active state on page load
+    setActiveButton(filterButtons[0]);  // Assuming the first button is 'All'
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            setActiveButton(this);
+
+            const selectedFilter = this.getAttribute('data-filter');
+            blogCards.forEach(card => {
+                if (selectedFilter === 'all' || card.classList.contains(selectedFilter)) {
+                    card.style.display = 'block'; // Ensure they follow the grid
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    function setActiveButton(activeButton) {
+        filterButtons.forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-black');
+        });
+        activeButton.classList.remove('bg-gray-200', 'text-black');
+        activeButton.classList.add('bg-primary', 'text-white');
+    }
+});
 
 
 
