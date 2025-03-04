@@ -3093,6 +3093,10 @@ html,
   background-color: rgb(161 230 255 / var(--tw-bg-opacity, 1));
 }
 
+.peer:focus ~ .peer-focus\:bg-none{
+  background-image: none;
+}
+
 .peer:focus ~ .peer-focus\:px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3350,6 +3354,16 @@ html,
 
 .dark\:hover\:bg-white\/5:hover:is(.dark *){
   background-color: rgb(255 255 255 / 0.05);
+}
+
+.peer:focus ~ .dark\:peer-focus\:bg-\[\#a1e6ff\]:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 230 255 / var(--tw-bg-opacity, 1));
+}
+
+.peer:focus ~ .dark\:peer-focus\:bg-\[\#045376\]:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 83 118 / var(--tw-bg-opacity, 1));
 }
 
 @media (min-width: 640px){

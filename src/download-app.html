@@ -2187,18 +2187,31 @@
                             </div>
 
                             <div class="relative max-w-lg w-full mb-5">
-                                <input class="peer transition-all text-secondary dark:text-white px-5 py-3 w-full text-lg outline-none select-all bg-transparent rounded-[10px] border border-primary" type="text" placeholder=" ">
-                                <label class="z-2 text-secondary dark:text-white pointer-events-none absolute left-5 inset-y-0 h-fit flex items-center select-none transition-all text-sm peer-focus:text-sm peer-placeholder-shown:text-md lg:peer-placeholder-shown:text-lg px-1 peer-focus:px-1 peer-placeholder-shown:px-0 bg-[#a1e6ff] dark:bg-[#045376] peer-focus:bg-[#a1e6ff]peer-placeholder-shown:bg-transparent m-0 peer-focus:m-0 peer-placeholder-shown:m-auto -translate-y-1/2 peer-focus:-translate-y-1/2 peer-placeholder-shown:translate-y-0">
+                                <input id="password" type="password" placeholder=" " class="peer transition-all text-secondary dark:text-white px-5 py-3 w-full text-lg outline-none select-all bg-transparent rounded-l-[10px] border border-primary">
+                                <button onclick="toggleVisibility('password', 'eyeIcon1')" type="button" class="absolute text-secondary dark:text-white inset-y-0 right-0 px-3 flex items-center ">
+                                    <svg id="eyeIcon1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                        <!-- SVG for eye close -->
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                                    </svg>
+                                </button>
+                                <label for="password" class="z-2 text-secondary dark:text-white pointer-events-none absolute left-5 inset-y-0 h-fit flex items-center select-none transition-all text-sm peer-focus:text-sm peer-placeholder-shown:text-md lg:peer-placeholder-shown:text-lg px-1 peer-focus:px-1 peer-placeholder-shown:px-0 bg-[#a1e6ff] dark:bg-[#045376] peer-focus:bg-[#a1e6ff] dark:peer-focus:bg-[#045376] peer-placeholder-shown:bg-transparent m-0 peer-focus:m-0 peer-placeholder-shown:m-auto -translate-y-1/2 peer-focus:-translate-y-1/2 peer-placeholder-shown:translate-y-0">
                                     Password
                                 </label>
                             </div>
-
+                            
                             <div class="relative max-w-lg w-full mb-5">
-                                <input class="peer transition-all text-secondary dark:text-white px-5 py-3 w-full text-lg outline-none select-all bg-transparent rounded-[10px] border border-primary" type="text" placeholder=" ">
-                                <label class="z-2 text-secondary dark:text-white pointer-events-none absolute left-5 inset-y-0 h-fit flex items-center select-none transition-all text-sm peer-focus:text-sm peer-placeholder-shown:text-md lg:peer-placeholder-shown:text-lg px-1 peer-focus:px-1 peer-placeholder-shown:px-0 bg-[#a1e6ff] dark:bg-[#045376] peer-focus:bg-[#a1e6ff]peer-placeholder-shown:bg-transparent m-0 peer-focus:m-0 peer-placeholder-shown:m-auto -translate-y-1/2 peer-focus:-translate-y-1/2 peer-placeholder-shown:translate-y-0">
+                                <input id="confirmPassword" type="password" placeholder=" " class="peer transition-all text-secondary dark:text-white px-5 py-3 w-full text-lg outline-none select-all bg-transparent rounded-l-[10px] border border-primary">
+                                <button onclick="toggleVisibility('confirmPassword', 'eyeIcon2')" type="button" class="absolute text-secondary dark:text-white  inset-y-0 right-0 px-3 flex items-center ">
+                                    <svg id="eyeIcon2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                        <!-- SVG for eye close -->
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                                    </svg>
+                                </button>
+                                <label for="confirmPassword" class="z-2 text-secondary dark:text-white pointer-events-none absolute left-5 inset-y-0 h-fit flex items-center select-none transition-all text-sm peer-focus:text-sm peer-placeholder-shown:text-md lg:peer-placeholder-shown:text-lg px-1 peer-focus:px-1 peer-placeholder-shown:px-0 bg-[#a1e6ff] dark:bg-[#045376] peer-focus:bg-[#a1e6ff] dark:peer-focus:bg-[#045376] peer-placeholder-shown:bg-transparent m-0 peer-focus:m-0 peer-placeholder-shown:m-auto -translate-y-1/2 peer-focus:-translate-y-1/2 peer-placeholder-shown:translate-y-0">
                                     Confirm Password
                                 </label>
                             </div>
+                            
 
                             <p class="mt-4 text-sm text-secondary dark:text-white max-w-lg">
                                 By proceeding, you confirm that you are above 18 years of age and agree to the <a href="#" class="text-[#00B6DE] hover:underline">Privacy Policy</a> & <a href="#" class="text-[#00B6DE] hover:underline">Terms of Use</a>.
@@ -2254,9 +2267,6 @@
                 </div>
             </div>
         </section>
-
-
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
