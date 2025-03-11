@@ -13,6 +13,12 @@ module.exports = {
         './src/blog.html',
         './src/newsroom.html',
         './src/our-operating.html',
+        './src/reward.html',
+        './src/help-video.html',
+        './src/help-center.html',
+        './src/help-community.html',
+        './src/help-chat.html',
+        './src/help-phone.html',
         
 
     ],
